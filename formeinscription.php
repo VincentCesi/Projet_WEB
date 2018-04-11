@@ -25,9 +25,9 @@
             }else
                 TestFullForm = TestFullForm + 1;
         }
-        function validatePassword(password, confirm_password){
+        function testSamePass(password, confirm_password){
             if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("Passwords Don't Match");
+            confirm_password.setCustomValidity("les mots de passes ne sont pas pareils");
             } else {
             confirm_password.setCustomValidity('');
             }
@@ -84,7 +84,7 @@
 			    				</div>
 			    			</div>
 
-			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email')); validatePassword(document.getElementById('password', 'confirm_password')); VerificationTotale(document.getElementById('Test'));">
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email')); testSamePass(document.getElementById('password', 'confirm_password')); VerificationTotale(document.getElementById('Test'));">
 
 			    		</form>
 			    	</div>
