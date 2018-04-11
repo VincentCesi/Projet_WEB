@@ -35,7 +35,9 @@
         <input id="email"><button onclick="testEmail(document.getElementById('email'));">Vérifier</button>
           <p>test pour password.
         <br>Le format attendu est 1 majuscule 1 minuscules et 1 chiffres au mini .</p>
-        <input id="password"><button onclick="testPass(document.getElementById('password'));">Vérifier</button>
+        <p>test pour password.
+        <input id="password"><button onclick="testPass(document.getElementById('password'));">
+         Vérifier</button>
     </form>
   </body>
 </html>

@@ -14,10 +14,11 @@ catch (Exception $e)
 {
             //En cas d'erreur, on affiche un message et on stop tout
         die('Erreur : ' . $e->getMessage());
-
+       $bdd = null;
 }
 
 //Fermeture de la connexion
-    $bdd = null;
+
+
 
 ?>

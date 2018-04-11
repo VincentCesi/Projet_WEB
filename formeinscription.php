@@ -6,27 +6,34 @@
 
         var re = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
         var re2 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{8,16}$/;
+        var Test = 0;
 
         function testEmail(email){
             var OK = re.exec(email.value);
-            if (!OK)
+            if (!OK){
                 window.alert(email.input + " n'est pas une email correct!");
-            else
-                window.alert("Email correct " + OK[0]);
+
+            }else
+                Test = Test + 1;
         }
         function testPass(password){
             var OK = re2.exec(password.value);
-            if (!OK)
+            if (!OK){
                 window.alert("Votre mot de passe n'est pas assez sécurisé!");
+
+            }else
+                Test = Test + 1;
         }
 
         function testCorrespondance(password, password_confirmation){
 
-            if (password == password_confirmation)
-                window.alert("Nickel");
-                else
+            if (password != password_confirmation){
                     window.alert("Mot de passe ne correspondant pas");
 
+                    window.alert("Valuer " +Test);
+            }else
+                Test = Test + 1;
+            window.alert("Valuer " +Test);
         }
     </script>
 <div class="container">
