@@ -2,7 +2,33 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+ <script type="text/javascript">
 
+        var re = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
+        var re2 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{8,16}$/;
+
+        function testEmail(email){
+            var OK = re.exec(email.value);
+            if (!OK)
+                window.alert(email.input + " n'est pas une email correct!");
+            else
+                window.alert("Email correct " + OK[0]);
+        }
+        function testPass(password){
+            var OK = re2.exec(password.value);
+            if (!OK)
+                window.alert("Votre mot de passe n'est pas assez sécurisé!");
+        }
+
+        function testCorrespondance(password, password_confirmation){
+
+            if (password == password_confirmation)
+                window.alert("Nickel");
+                else
+                    window.alert("Mot de passe ne correspondant pas");
+
+        }
+    </script>
 <div class="container">
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
@@ -42,7 +68,7 @@
 			    				</div>
 			    			</div>
 
-			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick="testPass(document.getElementById('password')); testEmail(document.getElementById('email')); testCorrespondance(document.getElementById(password, password_confirmation))">
 
 			    		</form>
 			    	</div>
