@@ -4,7 +4,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container">
-	<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
 		<form class="form-signin mg-btm">
     	<h3 class="heading-desc">
 		Connexion au site</h3>
