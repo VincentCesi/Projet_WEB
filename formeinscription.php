@@ -8,7 +8,7 @@
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Inscription au site <small>Wesh tu veux de la bonne beuh?</small></h3>
+			    		<h3 class="panel-title">Inscription au site <small>Pouf Pouf</small></h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form role="form">
@@ -66,6 +66,12 @@
 	   box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
        background-color: #525252;
 
+    }
+
+    .btn.btn-info.btn-block{
+
+       border-color: #E00A0A;
+       background: #E00A0A;
     }
 
 </style>
