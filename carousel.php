@@ -59,6 +59,8 @@ function make_slides($connect)
 }
 
 ?>
+
+
 <!DOCTYPE html>
 <html>
  <head>
