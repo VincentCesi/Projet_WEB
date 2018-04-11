@@ -1,5 +1,5 @@
 <?php
-
+//Finale
 
 try
 
@@ -17,5 +17,7 @@ catch (Exception $e)
 
 }
 
+//Fermeture de la connexion
+    $bdd = null;
 
 ?>
