@@ -36,7 +36,7 @@
             password.onchange = validatePassword;
             confirm_password.onkeyup = validatePassword;
         function VerificationTotale(){
-            if (TestFullForm < 3){
+            if (TestFullForm =! 3){
                 window.alert("vous n'avez pas remplis tout les champs");
 
                 window.alert("Value test =  " +TestFullForm);
