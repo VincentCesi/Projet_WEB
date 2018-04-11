@@ -4,36 +4,45 @@
 <!------ Include the above in your HEAD tag ---------->
  <script type="text/javascript">
 
-        var re = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
-        var re2 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{8,16}$/;
-        var Test = 0;
+        var regExpName = /^[A-Za-z][a-z]*\b/;
+        var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
+        var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{8,16}$/;
+        var TestFullForm = 0;
 
         function testEmail(email){
-            var OK = re.exec(email.value);
+            var OK = regExpMail.exec(email.value);
             if (!OK){
-                window.alert(email.input + " n'est pas une email correct!");
+                window.alert(" cette email n'est correct!");
 
             }else
-                Test = Test + 1;
+                TestFullForm = TestFullForm + 1;
         }
         function testPass(password){
-            var OK = re2.exec(password.value);
+            var OK = rexExpPass.exec(password.value);
             if (!OK){
                 window.alert("Votre mot de passe n'est pas assez sécurisé!");
 
             }else
-                Test = Test + 1;
+                TestFullForm = TestFullForm + 1;
+        }
+        function validatePassword(password, confirm_password){
+            if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+            confirm_password.setCustomValidity('');
+            }
         }
 
-        function testCorrespondance(password, password_confirmation){
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        function VerificationTotale(){
+            if (TestFullForm < 3){
+                window.alert("vous n'avez pas remplis tout les champs");
 
-            if (password != password_confirmation){
-                    window.alert("Mot de passe ne correspondant pas");
-
-                    window.alert("Valuer " +Test);
-            }else
-                Test = Test + 1;
-            window.alert("Valuer " +Test);
+                window.alert("Value test =  " +TestFullForm);
+            }
+            else
+                window.alert("merci de votre inscription");
         }
     </script>
 <div class="container">
@@ -48,12 +57,12 @@
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    						<input type="text" name="lastName" id="name" class="form-control input-sm" placeholder="Last Name">
 			    					</div>
 			    				</div>
 			    			</div>
@@ -70,12 +79,12 @@
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    						<input type="password" name="password_confirmation" id="confirm_password" class="form-control input-sm" placeholder="Confirm Password">
 			    					</div>
 			    				</div>
 			    			</div>
 
-			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick="testPass(document.getElementById('password')); testEmail(document.getElementById('email')); testCorrespondance(document.getElementById(password, password_confirmation))">
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email')); validatePassword(document.getElementById('password', 'confirm_password')); VerificationTotale(document.getElementById('Test'));">
 
 			    		</form>
 			    	</div>
@@ -86,9 +95,9 @@
 
 <style>
 
-   /* body{
-        background-color: #525252;
-    }*/
+   body{
+        background-color: #999999;
+    }
     .centered-form{
 	   margin-top: 60px;
 
@@ -108,3 +117,4 @@
     }
 
 </style>
+azertyuiO1
