@@ -32,72 +32,22 @@
         }
         function testSamePass(password,confirm_password){
 
-            if(password != confirm_password) {
-                window.alert("Passwords Don't Match");
-              } else {
-                window.alert('');
-              }
+            if(password.value === confirm_password.value)
+
+            window.alert("Passwords Don't Match");
+               else  {
+TestFullForm = TestFullForm + 1;
+
+               }
             }
         function VerificationTotale(){
-            if (TestFullForm != 3){
+            if (TestFullForm < 3){
                 window.alert("vous n'avez pas remplis tout les champs");
 
                 window.alert("Value test =  " +TestFullForm);
             }
             else
                 window.alert("merci de votre inscription");
-        }
-    </script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
- <script type="text/javascript">
-
-        var regExpName = /^[A-Za-z][a-z]*\b/;
-        var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
-        var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{5,16}$/;
-        var TestFullForm = 0;
-
-
-
-
-        function testEmail(email){
-            var OK = regExpMail.exec(email.value);
-            if (!OK){
-                window.alert(" cette email n'est correct!");
-
-            }else
-                TestFullForm = TestFullForm + 1;
-        }
-        function testPass(password){
-            var OK = rexExpPass.exec(password.value);
-            if (!OK){
-                window.alert("Votre mot de passe n'est pas assez sécurisé!");
-
-            }else
-
-                TestFullForm = TestFullForm + 1;
-        }
-
-
-        function testSamePass(password,confirm_password){
-
-            if(password != confirm_password) {
-                TestFullForm = TestFullForm + 1;
-              } else {
-                window.alert("Passwords Don't Match");
-
-            }
-
-                        }
-        function VerificationTotale(){
-            if (TestFullForm == 3){
-                window.alert("merci de votre inscription");
-            }
-            else
-
-                window.alert("vous n'avez pas remplis tout les champs");
-
-                window.alert("Value test =  " +TestFullForm);
         }
     </script>
 
@@ -109,11 +59,11 @@
 			    		<h3 class="panel-title">Inscription au site <small>Pouf Pouf</small></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form">
+			    		<form role="form" action ="testInscription.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="firstName" id="firstName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
