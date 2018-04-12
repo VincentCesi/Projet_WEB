@@ -11,20 +11,19 @@
         <meta charset="utf=8" />
         <title>Accueil</title>
 
-        <div id="conteneur">
+        <div id="bde">
+
+
             <img src="images/logos/ExiaLogo.png" class="img" />
 
-            <div >
+            <div>
                 <h1>BDE Exia PAU</h1>
-                <div>
                 <input class="imagef" type="image" alt="facebook" src="images/logos/facebook-770688_960_720.png">
                 <input class="imaget" type="image" alt="twitter" src="images/logos/Twitter_Bird.svg.png">
                 <input class="imaged" type="image" alt="discord" src="images/logos/discord-new-logo.png">
-
-                </div>
             </div>
 
-            <img src="images/logos/LogoBDExiaBlack.png" class="img" />
+            <img src="images/logos/LogoBDExiaBlack_2.png" class="img" />
         </div>
 
 
@@ -32,6 +31,11 @@
 
     <body>
 
+        <div id="onglet">
+
+            <h3>ONGLET</h3>
+
+        </div>
 
 
     </body>
@@ -47,20 +51,18 @@
 
 <style>
 
-    #conteneur{
+    #bde{
 
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
-
-
     }
 
-    .yo{
+    #onglet{
 
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
+
+        justify-content: flex-start;
+        margin-top: 20px;
     }
 
     .img{
@@ -71,21 +73,21 @@
 
     .imagef{
 
-        max-width: 5%;
-        height: auto%;
+        max-width: auto%;
+        height: 10%;
     }
 
 
     .imaget{
 
-        max-width: 6%;
-        height: auto%;
+        max-width: auto%;
+        height: 10%;
     }
 
     .imaged{
 
-        max-width: 5.5%;
-        height: auto%;
+        max-width: auto%;
+        height: 11%;
     }
 
     footer{
