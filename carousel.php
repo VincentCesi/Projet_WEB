@@ -1,6 +1,6 @@
 <?php
 //index.php
-$connect = mysqli_connect("localhost", "root", "", "projetweb");
+$connect = mysqli_connect("localhost", "root", "", "testing");
 function make_query($connect)
 {
  $query = "SELECT * FROM banner ORDER BY banner_id ASC";
@@ -48,7 +48,7 @@ function make_slides($connect)
    $output .= '<div class="item">';
   }
   $output .= '
-   <img src="images/'.$row["UrlImages"].'" style="width:1500px;height:1000px;" />
+   <img src="images/evenement/'.$row["banner_image"].'" style="width:1500px;height:1000px;" />
    <div class="carousel-caption">
    </div>
   </div>
@@ -59,13 +59,12 @@ function make_slides($connect)
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
  <head>
   <title>Voici un Carousel</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </head>
