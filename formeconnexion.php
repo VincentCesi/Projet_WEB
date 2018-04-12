@@ -12,8 +12,8 @@
 
 		<div class="main">
 
-		<input type="text" class="form-control" placeholder="Email" autofocus>
-        <input type="password" class="form-control" placeholder="Password">
+            <input type="text" class="form-control"  name="email" placeholder="Email" autofocus>
+            <input type="password" class="form-control" name="password" placeholder="Password">
 
 
 		<span class="clearfix"></span>
