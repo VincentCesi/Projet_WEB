@@ -6,14 +6,14 @@
 
 <div class="row justify-content-center">
 	<div>
-		<form class="form-signin mg-btm">
+		<form class="form-signin mg-btm" action ="testConnexion.php" method="post">
     	<h3 class="heading-desc">
 		Connexion au site</h3>
 
-		<div class="main">
+		<div class="main" >
 
-            <input type="text" class="form-control"  name="email" placeholder="Email" autofocus>
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="text" class="form-control"  name="email" id="email" placeholder="Email" autofocus>
+            <input type="password" class="form-control" name="password" id ="password" placeholder="Password">
 
 
 		<span class="clearfix"></span>
@@ -104,3 +104,5 @@
 
 
 </style>
+azertyuiO1
+remy@siah.fr

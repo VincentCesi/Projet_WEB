@@ -1,15 +1,17 @@
 <?php
 include ('connexiondb.php');
 //  Récupération de l'utilisateur et de son pass hashé
-var $email = $_POST['email'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-$request = $bdd->prepare('SELECT Email, Hash FROM users WHERE Email = :email');
+$requeteUsers = $bdd->prepare('SELECT Hash FROM users WHERE Email = :email');
 
     $requeteUsers->bindValue(':email', $email, PDO::PARAM_STR);
 
-
+$resultat = $requeteUsers->fetch();
+echo $resultat;
 // Comparaison du pass envoyé via le formulaire avec la base
-$isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
+$isPasswordCorrect = password_verify($password, $resultat['Hash']);
 
 if (!$resultat)
 {
@@ -19,8 +21,8 @@ else
 {
     if ($isPasswordCorrect) {
         session_start();
-        $_SESSION['id'] = $resultat['id'];
-        $_SESSION['pseudo'] = $pseudo;
+        $_SESSION['Hash'] = $resultat['Hash'];
+        $_SESSION['email'] = $email;
         echo 'Vous êtes connecté !';
     }
     else {
