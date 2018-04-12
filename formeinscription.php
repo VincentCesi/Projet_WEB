@@ -33,10 +33,12 @@
         function testSamePass(password,confirm_password){
 
             if(password.value === confirm_password.value)
-               TestFullForm = TestFullForm + 1;
-               else
 
-               window.alert("Passwords Don't Match");
+            window.alert("Passwords Don't Match");
+               else  {
+TestFullForm = TestFullForm + 1;
+
+               }
             }
         function VerificationTotale(){
             if (TestFullForm < 3){
