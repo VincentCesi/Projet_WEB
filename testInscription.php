@@ -1,7 +1,7 @@
 <?php
 
     $firstname = $_POST['firstname'];
-    $name = $_POST['name'];
+    $name = $_POST['lastName'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role = 0;
@@ -21,8 +21,6 @@ $requete = $bdd->prepare("INSERT INTO users (FirstName, Name, Email, Hash, ID_ro
 $lecture = $bdd->prepare("SELECT Email FROM users");
 $lecture->execute();
 
-//$result = $lecture->fetch(PDO::FETCH_COLUMN);
-/*print_r($result);*/
 print("\n");
 while ($result = $lecture->fetch(PDO::FETCH_COLUMN))
 {
