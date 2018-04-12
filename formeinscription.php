@@ -1,13 +1,16 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
  <script type="text/javascript">
 
         var regExpName = /^[A-Za-z][a-z]*\b/;
         var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
-        var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{8,16}$/;
+        var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{5,16}$/;
         var TestFullForm = 0;
+
+
+
 
         function testEmail(email){
             var OK = regExpMail.exec(email.value);
@@ -23,20 +26,19 @@
                 window.alert("Votre mot de passe n'est pas assez sécurisé!");
 
             }else
+
                 TestFullForm = TestFullForm + 1;
         }
-        function testSamePass(password, confirm_password){
-            if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("les mots de passes ne sont pas pareils");
-            } else {
-            confirm_password.setCustomValidity('');
-            }
-        }
+        function testSamePass(password,confirm_password){
 
-            password.onchange = validatePassword;
-            confirm_password.onkeyup = validatePassword;
+            if(password != confirm_password) {
+                window.alert("Passwords Don't Match");
+              } else {
+                window.alert('');
+              }
+            }
         function VerificationTotale(){
-            if (TestFullForm =! 3){
+            if (TestFullForm != 3){
                 window.alert("vous n'avez pas remplis tout les champs");
 
                 window.alert("Value test =  " +TestFullForm);
@@ -84,7 +86,10 @@
 			    				</div>
 			    			</div>
 
-			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email')); testSamePass(document.getElementById('password', 'confirm_password')); VerificationTotale(document.getElementById('Test'));">
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email'));
+                            VerificationTotale();
+                            testSamePass(document.getElementById('confirm_password', 'password'));
+                            ">
 
 			    		</form>
 			    	</div>
