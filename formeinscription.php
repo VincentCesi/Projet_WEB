@@ -32,14 +32,14 @@
         }
         function testSamePass(password,confirm_password){
 
-            if(password != confirm_password) {
-                window.alert("Passwords Don't Match");
-              } else {
-                window.alert('');
-              }
+            if(password.value === confirm_password.value)
+               TestFullForm = TestFullForm + 1;
+               else
+
+               window.alert("Passwords Don't Match");
             }
         function VerificationTotale(){
-            if (TestFullForm != 3){
+            if (TestFullForm < 3){
                 window.alert("vous n'avez pas remplis tout les champs");
 
                 window.alert("Value test =  " +TestFullForm);
@@ -82,10 +82,11 @@
         function testSamePass(password,confirm_password){
 
             if(password != confirm_password) {
-                TestFullForm = TestFullForm + 1;
-              } else {
                 window.alert("Passwords Don't Match");
 
+
+              } else {
+                TestFullForm = TestFullForm + 1;
             }
 
                         }
