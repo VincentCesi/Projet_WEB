@@ -59,11 +59,11 @@ TestFullForm = TestFullForm + 1;
 			    		<h3 class="panel-title">Inscription au site <small>Pouf Pouf</small></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="testInscription.php">
+			    		<form role="form" action ="testInscription.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="firstName" id="firstName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
