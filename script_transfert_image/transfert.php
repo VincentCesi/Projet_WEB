@@ -1,4 +1,6 @@
 <?php
+header( "refresh:5;url=envoieimage.php" );
+
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
 if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
 {
@@ -21,15 +23,17 @@ if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
 
                 include ("connexiondb.php");
 
-                    $requete = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
+                $requete = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
 
-                    $requete->bindValue(':urlimage', $urlimage, PDO::PARAM_STR);
-                    //$requete->bindValue(':description', $aled, PDO::PARAM_STR);
+                $requete->bindValue(':urlimage', $urlimage, PDO::PARAM_STR);
+                //$requete->bindValue(':description', $aled, PDO::PARAM_STR);
 
-                    $requete->execute();
+                $requete->execute();
+
+print("\n");
+echo "\n Vous allez être redirigé dans quelques secondes";
 
                 }
-
         }
 }
 ?>
