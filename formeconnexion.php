@@ -12,8 +12,8 @@
 
 		<div class="main" >
 
-            <input type="text" class="form-control"  name="email" id="email" placeholder="Email" autofocus>
-            <input type="password" class="form-control" name="password" id ="password" placeholder="Password">
+            <input type="text" class="form-control"  name="emailconnexion" id="emailconnexion" placeholder="Email" autofocus>
+            <input type="password" class="form-control" name="passwordconnexion" id ="passwordconnexion" placeholder="Password">
 
 
 		<span class="clearfix"></span>
@@ -105,4 +105,4 @@
 
 </style>
 azertyuiO1
-remy@siah.fr
+dorian@gmail.com
