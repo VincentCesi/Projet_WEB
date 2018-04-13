@@ -28,19 +28,9 @@
 
                 TestFullForm = TestFullForm + 1;
         }
-        function testSamePass(password,confirm_password){
 
-            if(password.value === confirm_password.value){
-
-                window.alert("Passwords Don't Match");
-                }
-               else {
-                    TestFullForm = TestFullForm + 1;
-
-               }
-            }
         function verificationTotale(){
-            if (TestFullForm < 3){
+            if (TestFullForm < 2){
                 window.alert("vous n'avez pas remplis tout les champs");
 
                 window.alert("Value test =  " +TestFullForm);
@@ -55,7 +45,7 @@
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Inscription au site <small>Pouf Pouf</small></h3>
+                    <h3 class="panel-title" ><center>Inscription au site </center></h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form role="form" action ="testInscription.php" method="post">
@@ -77,14 +67,9 @@
 			    			</div>
 
 			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
 			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password_confirmation" id="confirm_password" class="form-control input-sm" placeholder="Confirm Password">
 			    					</div>
 			    				</div>
 			    			</div>
@@ -92,7 +77,6 @@
                             testPass(document.getElementById('password'));
                             testEmail(document.getElementById('email'));
                             verificationTotale();
-                            testSamePass(document.getElementById('confirm_password', 'password'));
                             ">
 
 
