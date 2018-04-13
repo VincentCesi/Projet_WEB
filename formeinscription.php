@@ -6,7 +6,6 @@
 <!------ Include the above in your HEAD tag ---------->
  <script type="text/javascript">
 
-        var regExpName = /^[A-Za-z][a-z]*\b/;
         var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
         var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{5,16}$/;
         var TestFullForm = 0;
@@ -52,7 +51,7 @@
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="firstName" id="firstName" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="firstName" id="firstname" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
