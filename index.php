@@ -7,7 +7,7 @@
         <title>Accueil</title>
 
         <?php
-            include("../templates/head_bde.php");
+            include("Pages/templates/head_bde.php");
         ?>
     </head>
 
@@ -15,48 +15,27 @@
     <body>
         <div id="onglet">
             <?php
-                include("../templates/barre_nav.php");
+                include("Pages/templates/barre_nav.php");
             ?>
 
             <div class="txt_carousel">
                 <div class="txt">
                     <?php
                         print ("Bonjour et bienvenue dans notre site !!!! oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien.oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien.oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien. :D");
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
-                        echo'<br>';
+
                     ?>
                 </div>
 
                 <?php
 
-                    include("../templates/carousel.php");
+                    include("Pages/templates/carousel.php");
 
                 ?>
             </div>
 
             <div>
                 <?php
-                    include("../templates/barre_coins.php");
+                    include("Pages/templates/barre_coins.php");
                 ?>
 
                 <div class="bde">
@@ -72,7 +51,7 @@
     <footer>
 
         <?php
-            include("../templates/mention_footer.php");
+            include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 
@@ -80,5 +59,5 @@
 
 <?php
 
-    include("../templates/style.css");
+    include("Pages/templates/style.css");
 ?>
