@@ -3,30 +3,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-<!------ Include the above in your HEAD tag ---------->
- <script type="text/javascript">
-
-        var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
-        var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{5,16}$/;
-        var TestFullForm = 0;
-
-        function testEmail(email){
-            var OK = regExpMail.exec(email.value);
-            if (!OK){
-                window.alert(" cette email n'est correct!");
-
-            }else
-                TestFullForm = TestFullForm + 1;
-        }
-        function testPass(password){
-            var OK = rexExpPass.exec(password.value);
-            if (!OK){
-                window.alert("Votre mot de passe n'est pas assez sécurisé!");
-
-            }else
-
-                TestFullForm = TestFullForm + 1;
-        }
+<script type="text/javascript">
 
         function verificationTotale(){
             if (TestFullForm < 2){
@@ -38,20 +15,19 @@
                 window.alert("merci de votre inscription");
         }
     </script>
-
 <div class="container">
         <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="col-xs-12 col-sm-16 col-md-8 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-                    <h3 class="panel-title" ><center>Inscription au site </center></h3>
+                    <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="testInscription.php" method="post">
+			    		<form role="form" action ="inscription.php" method="post">
 			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    				<div class="col-xs-12 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="firstName" id="firstname" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="Titre" id="TitreActivité" class="form-control input-sm" placeholder="Titre de l'activité">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
@@ -120,7 +96,3 @@
 	padding:30px 30px 0px 38px;
     background-color: silver;
     }
-
-
-</style>
-azertyuiO1
