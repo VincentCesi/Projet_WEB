@@ -15,9 +15,22 @@
                 window.alert("merci de votre inscription");
         }
     </script>
-<div class="container">
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    } );
+</script>
+
+<div class="container centered_form">
         <div class="row centered-form">
-        <div class="col-xs-12 col-sm-16 col-md-8 col-sm-offset-4 col-md-offset-8">
+        <div class="col-xs-4 col-sm-4 col-md-8 col-lg-8 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
                     <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
@@ -27,7 +40,7 @@
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
-			                             <input type="text" name="Titre" id="TitreActivité" class="form-control input-sm" placeholder="Titre de l'activité">
+			                             <input type="text" name="Titre" id="TitreActivité" class="form-control input-sm" placeholder="Titre de l'activité" required>
 			    					</div>
 			    				</div>
                             </div>
@@ -35,30 +48,38 @@
                             <div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
-			    						<input type="text" name="nameAuthor" id="nameAuthor" class="form-control input-sm" placeholder="Votre nom">
+			    						<input type="text" name="nameAuthor" id="nameAuthor" class="form-control input-sm" placeholder="Votre nom" required>
 			    					</div>
 			    				</div>
-			    			</div>
-
-			    			<div class="form-group">
-			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
 			    			</div>
 
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
-			    						<input type="text" name="description" id="description" class="form-control input-sm" placeholder="Description">
+                                        <textarea rows="6" type="text" name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 			    					</div>
-			    				</div>
-			    			</div>
-		    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick="
-                            testPass(document.getElementById('password'));
-                            testEmail(document.getElementById('email'));
-                            verificationTotale();
-                            ">
 
+			    				     <div class="col-xs-6 col-sm-6 col-md-12">
+			    					    <div class="form-group">
+                                            <center><input type="text" id="datepicker" placeholder="Proposition de date" required></center>
+			    					    </div>
+			    				     </div>
+			    	            </div>
+                            </div>
 
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+			    					    <div class="form-group">
+                                            <input type="submit" value="Upload Image" class="btn btn-info btn-block">
+			    					    </div>
+			    	            </div>
+
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block">
+                                </div>
+                            </div>
 			    		</form>
+
 			    	</div>
 	    		</div>
     		</div>
@@ -91,11 +112,11 @@
     }
 
     .panel-body{
-        padding: 20px;
+        padding: 30px;
     }
 
     .panel-heading{
-    font-size:20px;
+    font-size:10px;
 	padding:30px 30px 0px 38px;
     background-color: silver;
     }
