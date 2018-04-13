@@ -7,7 +7,7 @@
         <title>Accueil</title>
 
         <?php
-            include("Pages/templates/head_bde.php");
+            include("../templates/head_bde.php");
         ?>
     </head>
 
@@ -15,7 +15,7 @@
     <body>
         <div id="onglet">
             <?php
-                include("Pages/templates/barre_nav.php");
+                include("../templates/barre_nav.php");
             ?>
 
             <div class="txt_carousel">
@@ -49,14 +49,14 @@
 
                 <?php
 
-                    include("Pages/templates/carousel.php");
+                    include("../templates/carousel.php");
 
                 ?>
             </div>
 
             <div>
                 <?php
-                    include("Pages/templates/barre_coins.php");
+                    include("../templates/barre_coins.php");
                 ?>
 
                 <div class="bde">
@@ -72,7 +72,7 @@
     <footer>
 
         <?php
-            include("Pages/templates/mention_footer.php");
+            include("../templates/mention_footer.php");
         ?>
     </footer>
 
@@ -80,5 +80,5 @@
 
 <?php
 
-    include("Pages/templates/style.css");
+    include("../templates/style.css");
 ?>
