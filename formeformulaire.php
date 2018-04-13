@@ -16,11 +16,12 @@
             <input type="text" class="form-control" name="description" id ="description" placeholder="Description">
 
             <form action="transfert.php" method="post" enctype="multipart/form-data">
-                <p>
-                    Formulaire d'envoi de fichier :<br />
+
+                    <h3 class="heading-desc">Choix du fichier</h3>
+                    <br />
                     <input type="file" name="monfichier" /><br />
                     <input type="submit" value="Envoyer le fichier" />
-                </p>
+
             </form>
 
 		<span class="clearfix"></span>
