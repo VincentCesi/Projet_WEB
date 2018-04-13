@@ -23,14 +23,13 @@ if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
 
                 include ("connexiondb.php");
 
-                $requete = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
+                $requete_envoie = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
 
-                $requete->bindValue(':urlimage', $urlimage, PDO::PARAM_STR);
+                $requete_envoie->bindValue(':urlimage', $urlimage, PDO::PARAM_STR);
                 //$requete->bindValue(':description', $aled, PDO::PARAM_STR);
 
-                $requete->execute();
+                $requete_envoie->execute();
 
-print("\n");
 echo "\n Vous allez être redirigé dans quelques secondes";
 
                 }
