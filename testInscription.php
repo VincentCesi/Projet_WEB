@@ -26,15 +26,16 @@ $requeteUsers = $bdd->prepare("INSERT INTO users (FirstName, Name, Email, Hash, 
 $lecture = $bdd->prepare("SELECT Email FROM users");
 $lecture->execute();
 
-//print("\n");
-
 
 $verification_mail = $lecture->fetch();
 
-if($email == $verification_mail['Email'])
+if($email != $verification_mail['Email'])
 {
     $requeteUsers->execute();
     $bdd = null;
+}else {
+
+    echo "Error";
 }
 
 
