@@ -25,7 +25,7 @@ if (!empty($email) AND !empty($password)){
                 $_SESSION['email'] = $userinfo['Email'];
                 $_SESSION['role'] = $userinfo['ID_roles'];
 
-            //header("Location: profil.php?id=".$_SESSION['id']);
+            header("Location: index.php?id=".$_SESSION['id']);
 
         echo "Welcome " . $_SESSION['email'];
         }else{
