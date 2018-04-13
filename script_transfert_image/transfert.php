@@ -31,7 +31,7 @@ header( "refresh:5;url=envoieimage.php" );
                                 $donnees['ID'] ++;
                             }
 
-                    $urlimage = 'uploads/' . $donnees['ID'] . $extension;
+                            $urlimage = 'uploads/' . $donnees['ID'] . $extension;
 
                             $requete_envoie = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
 
