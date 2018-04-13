@@ -7,7 +7,19 @@
         <title>Accueil</title>
 
         <?php
+
+
+        session_start();
+        if ($_SESSION['id'] != 0) {
+            echo "CONNECTE";
+
+            include("Pages/templates/head_bde_connected.php");
+        }else {
             include("Pages/templates/head_bde.php");
+        }
+
+
+
         ?>
     </head>
 
