@@ -6,13 +6,10 @@
 <!------ Include the above in your HEAD tag ---------->
  <script type="text/javascript">
 
-         var regExpName = /^[A-Za-z][a-z]*\b/;
+        var regExpName = /^[A-Za-z][a-z]*\b/;
         var regExpMail = /^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
         var rexExpPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]{5,16}$/;
         var TestFullForm = 0;
-
-
-
 
         function testEmail(email){
             var OK = regExpMail.exec(email.value);
@@ -33,15 +30,16 @@
         }
         function testSamePass(password,confirm_password){
 
-            if(password.value === confirm_password.value)
+            if(password.value === confirm_password.value){
 
-            window.alert("Passwords Don't Match");
-               else  {
-TestFullForm = TestFullForm + 1;
+                window.alert("Passwords Don't Match");
+                }
+               else {
+                    TestFullForm = TestFullForm + 1;
 
                }
             }
-        function VerificationTotale(){
+        function verificationTotale(){
             if (TestFullForm < 3){
                 window.alert("vous n'avez pas remplis tout les champs");
 
@@ -90,8 +88,10 @@ TestFullForm = TestFullForm + 1;
 			    					</div>
 			    				</div>
 			    			</div>
-		    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick=" testPass(document.getElementById('password')); testEmail(document.getElementById('email'));
-                            VerificationTotale();
+		    			<input type="submit" value="Register" class="btn btn-info btn-block" onclick="
+                            testPass(document.getElementById('password'));
+                            testEmail(document.getElementById('email'));
+                            verificationTotale();
                             testSamePass(document.getElementById('confirm_password', 'password'));
                             ">
 
@@ -140,5 +140,4 @@ TestFullForm = TestFullForm + 1;
 
 
 </style>
-
-
+azertyuiO1
