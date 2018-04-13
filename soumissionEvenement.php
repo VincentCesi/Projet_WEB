@@ -20,10 +20,10 @@
         <div class="col-xs-12 col-sm-16 col-md-8 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-                    <h3 class="panel-title" ><center>Inscription au site </center></h3>
+                    <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="testInscription.php" method="post">
+			    		<form role="form" action ="inscription.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
