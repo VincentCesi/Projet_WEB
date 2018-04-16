@@ -13,33 +13,55 @@
 
 
     <body>
-        <div id="onglet">
-            <?php
-                include("Pages/templates/barre_nav.php");
-            ?>
+        <div id="onglet" class="col-lg-12">
 
-            <div>
-            <div class="pass-carou">
-                <h3>allouibonjouretlkzbneknjb fg brb jb rbngrzbznztrnbrt"irtfbvbvhfbvbvzovrijvnnv   rfvv</h3>
-
+            <div class="col-sm-2">
                 <?php
-                    include("Pages/templates/carousel.php");
-
+                include("Pages/templates/barre_nav.php");
                 ?>
-
             </div>
 
-            <h1>Aoernbzbdjflùbznbrznù nrtùn rboinrnbnblnblnbndmbnnbjnsbndfa vjùe</h1>
-            </div>
-            <div>
+            <section class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <h3 class="col-sm-6">allouibonjouretlkzbneknjb fg brb jb rbngrzbznztrnbrt"irtfbvbvhfbvbvzovrijvnnv   rfvv</h3>
+
+                            <div class="col-sm-6">
+                            <?php
+                            include("Pages/templates/carousel.php");
+
+                            ?>
+                        </div>
+                        </div>
+
+
+
+                        <div class="col-md-12">
+                            <h1>Aoernbzbdjflùbznbrznù nrtùn rboinrnbnblnblnbndmbnnbjnsbndfa vjùe</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-sm-2">
                 <ul>
                     <li><a href="#proposerevent">Proposer un évènement</a></li>
                 </ul>
             </div>
 
 
-        </div>
-
+</div>
 
 
     </body>
