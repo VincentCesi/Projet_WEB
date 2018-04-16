@@ -32,7 +32,7 @@
             <div class="txt_carousel col-lg-8">
                 <div class="txt">
                     <?php
-                        print ("Bonjour et bienvenue dans notre site !!!! oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien.oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien.oui alors je saispas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien. :D");
+                        print ("df;:nhmkdjhbdkbjsfbnomdqbjk nek n dkdk  vkeùJB%PKVNWDVN?VXC. X  SDNVJL SNVSVNSKJVSDKVNS.V XSD SVSDVNSDKJVSV vNDSDV SDVDVMDSVNKJDV NKFDVSDVDBBDF B KJBW BJBJKDB DKJV EIEROBIERBI  SF IVDJBVKB KD KD VBVBSV BVSDBKDSVN VHDUZHDidfbvdvb ,ngbifbbdjd v  svbvjd dfvdfvbdvbd vvbbfdbdffvbdkj vbdvbjv cnxvjhdfbvjhdbv dfvdvbjhvbjebzj vvbjhbfhjsd vdsv hs vs vsvjsvjsb jesjhsb vjvj vhsvfghsev sjvesvsjhv");
 
                     ?>
                 </div>
