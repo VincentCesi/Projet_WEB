@@ -51,8 +51,9 @@
                 <ul>
                     <li><a href="participationEvent.php">Participer à l'évènement</a></li>
                 </ul>
-
-                <button>LIKE</button>
+                <form action="participationEvent.php" method="post">
+                <input type="submit" value="J'aime" name="Like" id="Like">
+                </form>
             </div>
         </div>
     </body>

@@ -26,7 +26,7 @@ $lecture = $bdd->prepare("SELECT Email FROM users");
 $lecture->execute();
 
 
-$verification_mail = $lecture->fetch();
+$verification_mail = $lecture->fetchALL();
 
 if($email != $verification_mail['Email'])
 {
