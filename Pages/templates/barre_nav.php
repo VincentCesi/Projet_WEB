@@ -2,7 +2,7 @@
             <div class="nav">
 
                 <ul>
-                <li class="active"><a href="#accueil">Accueil</a></li>
+                <li><a href="#accueil">Accueil</a></li>
                 <li><a href="page_evenement_ok.php">Evènements</a></li>
                 <li><a href="page_evenement.php">Boîte à idée</a></li>
                 <li><a href="#association">Associations</a></li>
@@ -11,6 +11,11 @@
 
             </ul>
 
-
+<script >
+    $(".nav li").on("click", function() {
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
 
             </div>

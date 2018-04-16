@@ -68,12 +68,7 @@ session_start();
             </div>
         </div>
 
-        <script >
-        $(".nav li").on("click", function() {
-      $(".nav li").removeClass("active");
-      $(this).addClass("active");
-    });
-</script>
+
 
     </body>
 
