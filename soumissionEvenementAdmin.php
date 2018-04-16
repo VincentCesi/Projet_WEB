@@ -46,7 +46,7 @@
                     <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="participationEvent.php" method="post">
+			    		<form role="form" action ="propositionEventAdminDb.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
