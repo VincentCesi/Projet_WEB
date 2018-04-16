@@ -50,10 +50,11 @@
             </section>
 
             <div class="col-sm-2">
-                <ul>
-                    <li><a href="participationEvent.php">Participer à l'évènement</a></li>
-                </ul>
-                <form action="participationEvent.php" method="post">
+                <ul><form action="participationEvent.php" method="post">
+                        <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
+                    </form>
+                    </ul>
+                <form action="Like.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
             </div>
