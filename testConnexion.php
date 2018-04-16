@@ -23,7 +23,7 @@ if (!empty($email) AND !empty($password)){
             session_start();
                 $_SESSION['id'] = $userinfo['ID'];
                 $_SESSION['email'] = $userinfo['Email'];
-                $_SESSION['role'] = $userinfo['ID_roles'];
+                $_SESSION['role'] = $userinfo['ID'];
 
             header("Location: index.php");
 
