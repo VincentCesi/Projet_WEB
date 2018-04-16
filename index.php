@@ -32,7 +32,7 @@
             <div class="txt_carousel col-lg-8">
                 <div class="txt">
                     <?php
-                        print ("df;:nhmkdjhbdkbjsfbnomdqbjk nek n dkdk  vkeùJB%PKVNWDVN?VXC. X  SDNVJL SNVSVNSKJVSDKVNS.V XSD SVSDVNSDKJVSV vNDSDV SDVDVMDSVNKJDV NKFDVSDVDBBDF B KJBW BJBJKDB DKJV EIEROBIERBI  SF IVDJBVKB KD KD VBVBSV BVSDBKDSVN VHDUZHDidfbvdvb ,ngbifbbdjd v  svbvjd dfvdfvbdvbd vvbbfdbdffvbdkj vbdvbjv cnxvjhdfbvjhdbv dfvdvbjhvbjebzj vvbjhbfhjsd vdsv hs vs vsvjsvjsb jesjhsb vjvj vhsvfghsev sjvesvsjhv");
+                        print ("df;:nhmkdjhbdkbjsfbnomdqbjk nek n dkdk  vkeùJB%PKVNWDVN?VXC. X  SDNVJL SNVSVNSKJVSDKVNS.V XSD SVSDVNSDKJVSV vNDSDV SDVDVMDSVNKJDV NKFDVSDVDBBDF B KJBW BJBJKDB DKJV EIEROBIERBI  SF IVDJBVKB KD KD VBVBSV BVSDBKDSVN VHDUZHDidfbvdvb ,ngbifbbdjd v  svbvjd dfvdfvbdvbd vvbbfdbdffvbdkj vbdvbjv cnxvjhdfbvjhdbv dfvdvbjhvbjebzj vvbjhbfhjsd vdsv hs vs vsvjsvjsb jesjhsb vjvj vhsvfghsev sjvesvsjhvehrtntnt");
 
                     ?>
                 </div>
