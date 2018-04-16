@@ -1,7 +1,12 @@
 
 <!DOCTYPE htlm>
 <html>
-
+    <?php
+    session_start();
+        if (!isset($_SESSION['id'])) {
+            header("Location: index.php");
+        }
+    ?>
     <head>
         <meta charset="utf=8" />
         <title>Accueil</title>
@@ -56,7 +61,15 @@
 
             <div class="col-sm-2">
                 <ul>
-                    <li><a href="#proposerevent">Proposer un évènement</a></li>
+                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
+                    <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] == 4){?>
+                      <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
+                   <?php
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
 

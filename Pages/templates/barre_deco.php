@@ -1,3 +1,3 @@
 <ul>
-    <li><a href="#deconnexion">Se déconnecter</a></li>
+    <li><a href="testDeconnexion.php">Se déconnecter</a></li>
 </ul>

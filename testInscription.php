@@ -6,14 +6,13 @@
     $password = $_POST['password'];
     $role = 2;
 
-
     $hash = password_hash( $password, PASSWORD_DEFAULT);
 
 include ('connexiondb.php');
 
 
 // Requête préparée pour empêcher les injections SQL
-$requeteUsers = $bdd->prepare("INSERT INTO users (FirstName, Name, Email, Hash, ID_roles) VALUES( :firstname, :name, :email, :hash, :role)");
+$requeteUsers = $bdd->prepare("INSERT INTO users (FirstName, Name, Email, Hash, ID) VALUES( :firstname, :name, :email, :hash, :role)");
 
     $requeteUsers->bindValue(':firstname', $firstname, PDO::PARAM_STR);
     $requeteUsers->bindValue(':name', $name, PDO::PARAM_STR);
@@ -32,6 +31,7 @@ $verification_mail = $lecture->fetch();
 if($email != $verification_mail['Email'])
 {
     $requeteUsers->execute();
+    header("Location: index.php");
     $bdd = null;
 }else {
 

@@ -1,6 +1,5 @@
 <?php
-//header( "refresh:5;url=envoieimage.php" );
-
+header( "refresh:5;url=envoieimage.php" );
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
     if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
     {
@@ -18,9 +17,21 @@
 
                     include ("connexiondb.php");
 
-                    $i = NULL;
-                    $nominage = $1;
-                    $urlimage = 'uploads/' . $nominage . $extension;
+                            $test = $bdd->query("SELECT ID FROM image ORDER BY ID DESC LIMIT 1");
+
+                            $donnees = $test->fetch();
+
+                            if ($donnees == NULL)
+                            {
+                                $donnees['ID'] = 1;
+                            }
+
+                            else
+                            {
+                                $donnees['ID'] ++;
+                            }
+
+                            $urlimage = 'uploads/' . $donnees['ID'] . $extension;
 
                             $requete_envoie = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
 
@@ -32,7 +43,7 @@
 
                     echo "L'envoi a bien été effectué !";
 
-                    echo "\n Vous allez être redirigé dans quelques secondes";
+                    echo "\n Vous allez être redirigé dans quelques secondes.";
 
                     }
             }

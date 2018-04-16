@@ -8,7 +8,14 @@
         <title>Accueil</title>
 
         <?php
+
+session_start();
+
             include("Pages/templates/head_bde.php");
+
+
+
+
         ?>
     </head>
 
@@ -41,7 +48,16 @@
 
             <div class="col-lg-2">
                 <?php
-                    include("Pages/templates/barre_coins.php");
+        if (isset($_SESSION['id'])) {
+
+            if ($_SESSION['id'] != 0) {
+                echo "Bienvenue " . $_SESSION['email'];
+
+                include("Pages/templates/barre_deco.php");
+            }
+        }else {
+            include("Pages/templates/barre_coins.php");
+        }
                 ?>
 
                 <div class="bde">
