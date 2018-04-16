@@ -1,7 +1,19 @@
 
 <!DOCTYPE htlm>
 <html>
+    <?php
+    session_start();
+        if (isset($_SESSION['id'])) {
 
+            if ($_SESSION['id'] != 0) {
+
+
+
+            }
+        }else {
+            header("Location: index.php");
+        }
+    ?>
     <head>
         <meta charset="utf=8" />
         <title>Accueil</title>
@@ -33,7 +45,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#proposerevent">Proposer un évènement</a></li>
+                    <li><a href="soumissionEvenement.php">Proposer un évènement</a></li>
                 </ul>
             </div>
 
