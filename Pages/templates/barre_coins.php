@@ -1,4 +1,4 @@
 <ul>
-    <li><a href="#connexion">Se connecter</a></li>
-    <li><a href="#inscription">S'inscrire</a></li>
+    <li><a href="formeconnexion.php">Se connecter</a></li>
+    <li><a href="formeinscription.php">S'inscrire</a></li>
 </ul>
