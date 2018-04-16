@@ -1,3 +1,5 @@
+<!DOCTYPE htlm>
+
 <html>
    <head>
       <title>Stock d'images</title>
