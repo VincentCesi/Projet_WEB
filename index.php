@@ -8,10 +8,10 @@
 
         <?php
 
-
+session_start();
 
             include("Pages/templates/head_bde.php");
-        }
+
 
 
 
@@ -42,13 +42,15 @@
 
             <div>
                 <?php
-                     session_start();
-        if ($_SESSION['id'] != 0) {
-            echo "CONNECTE";
+        if (isset($_SESSION['id'])) {
 
-            include("Pages/templates/barre_deco.php");
+            if ($_SESSION['id'] != 0) {
+                echo "Bienvenue " . $_SESSION['email'];
+
+                include("Pages/templates/barre_deco.php");
+            }
         }else {
-                    include("Pages/templates/barre_coins.php");
+            include("Pages/templates/barre_coins.php");
         }
                 ?>
 
