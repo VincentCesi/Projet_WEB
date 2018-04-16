@@ -38,15 +38,8 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
-                    <?php
-                    if (isset($_SESSION['role'])) {
-                        if ($_SESSION['role'] == 4){?>
-                      <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
-                   <?php
-                        }
-                    }
-                    ?>
+                    <li><a href="participationEvent.php">Participer à l'évènement</a></li>
+
                 </ul>
             </div>
 
