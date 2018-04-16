@@ -32,6 +32,7 @@ $verification_mail = $lecture->fetch();
 if($email != $verification_mail['Email'])
 {
     $requeteUsers->execute();
+    header("Location: index.php");
     $bdd = null;
 }else {
 
