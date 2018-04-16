@@ -32,7 +32,8 @@
             <div class="txt_carousel col-lg-8">
                 <div class="txt">
                     <?php
-                        print ("df;:nhmkdjhbdkbjsfbnomdqbjk nek n dkdk  vkeùJB%PKVNWDVN?VXC. X  SDNVJL SNVSVNSKJVSDKVNS.V XSD SVSDVNSDKJVSV vNDSDV SDVDVMDSVNKJDV NKFDVSDVDBBDF B KJBW BJBJKDB DKJV EIEROBIERBI  SF IVDJBVKB KD KD VBVBSV BVSDBKDSVN VHDUZHDidfbvdvb ,ngbifbbdjd v  svbvjd dfvdfvbdvbd vvbbfdbdffvbdkj vbdvbjv cnxvjhdfbvjhdbv dfvdvbjhvbjebzj vvbjhbfhjsd vdsv hs vs vsvjsvjsb jesjhsb vjvj vhsvfghsev sjvesvsjhvehrtntnt");
+
+                        print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et ");
 
                     ?>
                 </div>
@@ -60,7 +61,7 @@
 
                 <div class="bde">
                     <?php
-                        print ("Voici les membres principaux de le team du BDE oui alors je sais pas ce que je fous ici donc bon voila voila coucou maman je vais bien tout va bien je ne suis pas fou je suis juste différent donc ne t'en fait pas je vais bien tout va bien.")
+                        print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et futurorum timore suspensus angorem animi quam diu potuit emendabat.")
                     ?>
                 </div>
             </div>
