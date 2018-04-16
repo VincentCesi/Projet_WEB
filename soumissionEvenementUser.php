@@ -3,23 +3,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-
-        function verificationTotale(){
-            if (TestFullForm < 2){
-                window.alert("vous n'avez pas remplis tout les champs");
-
-                window.alert("Value test =  " +TestFullForm);
-            }
-            else
-                window.alert("merci de votre inscription");
-        }
-</script>
-
-
 <div class="container centered_form">
         <div class="row centered-form">
-        <div class="col-xs-4 col-sm-4 col-md-8 col-lg-8 col-sm-offset-4 col-md-offset-8">
+        <div class="col-xs-2 col-sm-12 col-md-10 col-lg-6 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
                     <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
@@ -27,15 +13,15 @@
 			 			<div class="panel-body">
 			    		<form role="form" action ="propositionEventUsersDb.php" method="post">
 			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-12">
+			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-			                             <input type="text" name="Titre" id="TitreActivité" class="form-control input-sm" placeholder="Titre de l'activité" required>
+			                             <input type="text" name="TitreActivite" id="TitreActivite" class="form-control input-sm" placeholder="Titre de l'activité" required>
 			    					</div>
 			    				</div>
                             </div>
 
                             <div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-12">
+			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
 			    						<input type="text" name="nameAuthor" id="nameAuthor" class="form-control input-sm" placeholder="Votre nom" required>
 			    					</div>
@@ -43,7 +29,7 @@
 			    			</div>
 
 			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-12">
+			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
                                         <textarea rows="6" type="text" name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 			    					</div>
