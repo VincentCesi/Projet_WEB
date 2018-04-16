@@ -14,29 +14,8 @@
             else
                 window.alert("merci de votre inscription");
         }
-    </script>
-<!--  Ensemble des liens et scripts nécessaire à la date -->
-<!--  jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Bootstrap Date-Picker Plugin -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //notre injection de date a pour nom "date"
-
-      var options={
-        format: "dd/mm/yyyy",
-        clearBtn: true,
-        keyboardNavigation: true,
-        startDate: "now",
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
 </script>
+
 
 <div class="container centered_form">
         <div class="row centered-form">
@@ -46,7 +25,7 @@
                     <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="propositionIdeeDb.php" method="post">
+			    		<form role="form" action ="propositionEventUsersDb.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
@@ -68,23 +47,12 @@
 			    					<div class="form-group">
                                         <textarea rows="6" type="text" name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 			    					</div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-6 col-xs-12">
-
-                                                    <!-- Form code begins -->
-                                            <div class="form-group"> <!-- Date input -->
-                                                    <input class="form-control" id="date" name="date" placeholder="Veuillez rentrer une date de proposition" type="text"/>
-                                            </div>
-
-                                            </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6">
 			    					    <div class="form-group">
-                                            <input type="submit" value="Upload Image" class="btn btn-info btn-block">
+                                            <input type="submit" value="Upload d'images" class="btn btn-info btn-block">
 			    					    </div>
 			    	            </div>
 
