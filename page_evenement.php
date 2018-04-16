@@ -22,6 +22,9 @@
                 <?php
                 include("Pages/templates/barre_nav.php");
                 ?>
+                <script>
+                    $(".bar3").addClass("active");
+                </script>
             </div>
 
             <section class="col-sm-8">

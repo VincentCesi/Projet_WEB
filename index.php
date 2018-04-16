@@ -9,13 +9,9 @@
 
         <?php
 
-session_start();
+            session_start();
 
             include("Pages/templates/head_bde.php");
-
-
-
-
         ?>
     </head>
 
@@ -27,7 +23,9 @@ session_start();
             <?php
                 include("Pages/templates/barre_nav.php");
             ?>
-
+                <script>
+                    $(".bar1").addClass("active");
+                </script>
             </div>
 
 
