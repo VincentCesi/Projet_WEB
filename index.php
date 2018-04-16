@@ -7,7 +7,14 @@
         <title>Accueil</title>
 
         <?php
+
+
+
             include("Pages/templates/head_bde.php");
+        }
+
+
+
         ?>
     </head>
 
@@ -35,7 +42,14 @@
 
             <div>
                 <?php
+                     session_start();
+        if ($_SESSION['id'] != 0) {
+            echo "CONNECTE";
+
+            include("Pages/templates/barre_deco.php");
+        }else {
                     include("Pages/templates/barre_coins.php");
+        }
                 ?>
 
                 <div class="bde">
