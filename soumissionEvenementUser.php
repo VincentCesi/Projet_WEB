@@ -15,7 +15,7 @@
 			    			<div class="row">
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-			                             <input type="text" name="TitreActivite" id="TitreActivite" class="form-control input-sm" placeholder="Titre de l'activité" required>
+			                             <input type="text" name="title" id="title" class="form-control input-sm" placeholder="Titre de l'activité" required>
 			    					</div>
 			    				</div>
                             </div>
