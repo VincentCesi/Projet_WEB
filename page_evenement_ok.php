@@ -39,40 +39,17 @@
 
                     <div class="col-sm-12">
                         <form action="" method="">
-                                Titre_text
+                            Titre_text
+                            <br>
+                            Description_text
+                            <br>
+                            Auteur_text
+                            <br>
+                            Date_text
                         </form>
 
                     </div>
 
-                    <div class="col-sm-12">
-                        Description
-                    </div>
-
-                    <div class="col-sm-12">
-                        <form action="" method="">
-                        Description_txt
-                        </form>
-                    </div>
-
-                    <div class="col-sm-12">
-                        Auteur
-                    </div>
-
-                    <div class="col-sm-12">
-                        <form action="" method="">
-                        Auteur_txt
-                        </form>
-                    </div>
-
-                    <div class="col-sm-12">
-                        Date
-                    </div>
-
-                    <div class="col-sm-12">
-                        <form action="" method="">
-                        Date_txt
-                        </form>
-                    </div>
 
 
 
