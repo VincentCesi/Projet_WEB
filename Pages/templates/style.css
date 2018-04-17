@@ -119,6 +119,19 @@
         width: auto;
     }
 
+.table_event{
+            border: 4px #999999 groove;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+}
+
+.liste_event{
+            border-bottom: 1px #999999 groove;
+            border-right: 1px #999999 groove;
+
+
+}
 
 
 
