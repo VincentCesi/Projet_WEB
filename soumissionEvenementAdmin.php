@@ -25,10 +25,10 @@
 
 <script>
     $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //notre injection de date a pour nom "date"
+      var date_input=$('input[name="eventDate"]'); //notre injection de date a pour nom "eventDate"
 
       var options={
-        format: "dd/mm/yyyy",
+        format: "yyyy/mm/dd",
         clearBtn: true,
         keyboardNavigation: true,
         startDate: "now",
@@ -36,6 +36,39 @@
       };
       date_input.datepicker(options);
     })
+    $(document).ready(function(){
+      var date_input=$('input[name="dateAccept"]'); //notre injection de date a pour nom "nowDate"
+
+      var options={
+        format: "yyyy/mm/dd",
+        todayBtn:"true",
+        keyboardNavigation: true,
+        startDate: "now",
+        endDate: "now",
+        defaultViewDate : "now",
+        todayHighlight: "true",
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+
+    function now(Now){
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth()+1; //les mois sont basé sur 0!
+        var year = today.getFullYear();
+
+        if(dd<10) {
+            dd = '0'+dd
+        }
+
+        if(mm<10) {
+            mm = '0'+mm
+        }
+
+        today = year + '/' + month + '/' + day;
+        document.getElementById('dateAccept').setAttribute()
+    }
 </script>
 
 <div class="container centered_form">
@@ -68,16 +101,22 @@
 			    					<div class="form-group">
                                         <textarea rows="6" type="text" name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 			    					</div>
-
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-6 col-xs-12">
-
-                                                    <!-- Form code begins -->
-                                            <div class="form-group"> <!-- Date input -->
-                                                    <input class="form-control" id="date" name="date" placeholder="Veuillez rentrer une date de proposition" type="text"/>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="form-group">
+                                                    <input class="form-control" id="date" name="eventDate" placeholder="Date de début" type="text" required/>
                                             </div>
-
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="form-group">
+                                                    <input class="form-control" id="date" name="eventDate" placeholder="Date de fin" type="text" required/>
                                             </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="form-group">
+                                                    <input class="form-control" id="dateAccept" name="dateAccept" placeholder="Date du jour" type="text" required/>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +128,7 @@
 			    	            </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block">
+		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block" onclick="now();">
                                 </div>
                             </div>
 			    		</form>

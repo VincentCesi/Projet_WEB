@@ -11,15 +11,18 @@
     </script>
     <?php
     session_start();
-        if (!isset($_SESSION['id'])) {
-            header("Location: index.php");
-        }
+
+
+      //  if (!isset($_SESSION['id'])) {
+      //      header("Location: index.php");
+      //  }
     ?>
     <head>
         <meta charset="utf=8" />
         <title>Accueil</title>
         <?php
             include("Pages/templates/head_bde.php");
+
         ?>
     </head>
 
@@ -31,49 +34,52 @@
                 include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
-                    $(".bar3").addClass("active");
+                    $(".bar2").addClass("active");
                 </script>
             </div>
 
-            <section class="table_event col-sm-8">
-                <div class="row">
+
+            <section class="col-sm-10">
+<?php
+     include('connexiondb.php');
+     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
+     while ($event = $requeteEvent->fetch())
+     {
+?>
+                <div class="table_event">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">
-                                Titre
-                            </div>
+                                <form action="post" >
+                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                                    <br>
+                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <br>
+                                <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
+                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID']; ?>"/>
+                                </form>
 
-                            <div class="liste_event col-sm-12">
-                                Description
-                            </div>
-
-                            <div class="liste_event col-sm-12">
-                                Auteur
                             </div>
                         </div>
                     </div>
 
+
                     <div class="col-sm-2" >
-                        <button>Voir les informations sur cet évènement</button>
+                        <button type="submit" >Voir les informations sur cet évènement</button>
                     </div>
                 </div>
+<?php
+            }
+?>
             </section>
 
 
-            <div class="col-sm-2">
-                <ul>
-                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
-                    <?php
-                        if (isset($_SESSION['role'])) {
-                            if ($_SESSION['role'] == 4){?>
-                            <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
-                            <?php
-                        }
-                    }
-                    ?>
-                </ul>
-            </div>
-        </div>
+
+
+
+
+
+
     </body>
 
     <footer>
