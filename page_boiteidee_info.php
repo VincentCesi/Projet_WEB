@@ -67,7 +67,7 @@
 
             <div class="col-sm-2">
                 <form class="go_event" action="likeIdee.php" method="post">
-                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                    <input type='hidden' name="id_evenement_like" Value="<?= $idEvent; ?>"/>
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
 

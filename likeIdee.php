@@ -1,9 +1,7 @@
 <?php
-    $idEvent = $_POST['id_evenement'];
+    $idEvent = $_POST['id_evenement_like'];
     include('connexiondb.php');
     session_start();
-
-
 
     $requeteInsertLike = $bdd->prepare('INSERT INTO voteidea(ID_Idea, ID_User) VALUES(:idEvent, :idUsers)');
 
@@ -11,5 +9,5 @@
     $requeteInsertLike->bindValue(':idUsers', $_SESSION['id'], PDO::PARAM_STR);
 
     $requeteInsertLike->execute();
-header("Location: index.php");
+//header("Location: index.php");
 ?>
