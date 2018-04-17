@@ -39,14 +39,14 @@
             </div>
 
 
-            <section class="table_event col-sm-10">
+            <section class="col-sm-10">
 <?php
      include('connexiondb.php');
      $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
      while ($event = $requeteEvent->fetch())
      {
 ?>
-                <div class="row">
+                <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">

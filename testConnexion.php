@@ -21,9 +21,9 @@ if (!empty($email) AND !empty($password)){
         if($userexist == 1 && password_verify($password, $userinfo['Hash']) ==  true){
 
             session_start();
-                $_SESSION['id'] = $userinfo['ID'];
+                $_SESSION['id'] = $userinfo['ID_users'];
                 $_SESSION['email'] = $userinfo['Email'];
-                $_SESSION['role'] = $userinfo['ID_roles'];
+                $_SESSION['role'] = $userinfo['ID'];
 
             header("Location: index.php");
 
