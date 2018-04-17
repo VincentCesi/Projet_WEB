@@ -10,7 +10,7 @@ if (!empty($email) AND !empty($password)){
 
     $requeteUsers = $bdd->prepare('SELECT * FROM users WHERE Email = :email');
         $requeteUsers->bindValue(':email', $email, PDO::PARAM_STR);
-        //$requeteUsers->bindValue(':password', $hash, PDO::PARAM_STR);
+
         $requeteUsers->execute();
 
     $userinfo = $requeteUsers->fetch();
@@ -21,9 +21,9 @@ if (!empty($email) AND !empty($password)){
         if($userexist == 1 && password_verify($password, $userinfo['Hash']) ==  true){
 
             session_start();
-                $_SESSION['id'] = $userinfo['ID_users'];
+                $_SESSION['id'] = $userinfo['ID'];
                 $_SESSION['email'] = $userinfo['Email'];
-                $_SESSION['role'] = $userinfo['ID'];
+                $_SESSION['role'] = $userinfo['ID_roles'];
 
             header("Location: index.php");
 
