@@ -46,10 +46,10 @@
      while ($event = $requeteEvent->fetch())
      {
 ?>
-                <div class="table_event">
+                <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
-                            <div class="liste_event col-sm-12">
+                            <div class="col-sm-12">
                                 <form action="post" >
                                 <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                     <br>

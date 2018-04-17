@@ -40,8 +40,8 @@
 
 
 
-            <section class="table_event col-sm-8">
-                <div class="row">
+            <section class="col-sm-8">
+                <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">
