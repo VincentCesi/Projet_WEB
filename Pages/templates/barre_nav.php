@@ -9,7 +9,7 @@
                 <li class="bar4"><a href="#association">Associations</a></li>
                 <li class="bar5"><a href="#bde">BDE</a></li>
                 <li class="bar6"><a href="#galerie">Galerie</a></li>
-
+                <li class="bar7"><a href="formereport.php">Signaler</a></li>
 
             </ul>
             </div>
