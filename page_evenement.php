@@ -46,7 +46,7 @@
      while ($event = $requeteEvent->fetch())
      {
 ?>
-                <div class="table_event row">
+                <div class="table_event">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">
@@ -68,11 +68,12 @@
                         <button type="submit" >Voir les informations sur cet évènement</button>
                     </div>
                 </div>
-            </section>
-
 <?php
             }
 ?>
+            </section>
+
+
 
 
 
