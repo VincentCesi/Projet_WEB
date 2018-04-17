@@ -12,7 +12,7 @@
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Info Event</title>
 
         <?php
             include("Pages/templates/head_bde.php");

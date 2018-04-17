@@ -18,7 +18,7 @@
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Boîte à idée</title>
         <?php
             include("Pages/templates/head_bde.php");
         ?>
@@ -77,6 +77,17 @@
             </section>
 
             <div class="col-sm-2">
+                <?php
+                if (isset($_SESSION['id'])) {
+
+                if ($_SESSION['id'] != 0) {
+                    echo "Bienvenue " . $_SESSION['email'];
+
+                    include("Pages/templates/barre_deco.php");
+                    }
+
+                }
+                ?>
                 <ul>
                     <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
                     <?php
@@ -86,8 +97,12 @@
                             <?php
                         }
                     }
+
                     ?>
+
+
                 </ul>
+
             </div>
         </div>
     </body>

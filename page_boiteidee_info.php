@@ -14,7 +14,7 @@
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Info idée</title>
 
         <?php
             include("Pages/templates/head_bde.php");
