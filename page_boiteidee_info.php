@@ -26,7 +26,6 @@
         <?php
 
             $idEvent = $_POST['id_evenement'];
-            echo $idEvent;
             include('connexiondb.php');
             $requeteEvent = $bdd->prepare("SELECT * FROM events WHERE ID_Event = ?");
             $requeteEvent->execute(array($idEvent));
@@ -47,12 +46,14 @@
 
                     <div class="col-sm-12">
                           <form  >
-                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                              <div class="col-sm-12">
+                                <h3><div class="Titre"  id="titre"><?= $event['Title']; ?></div></h3>
+                              </div>
                                     <br>
                                 <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                 <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_Event']; ?>"/>
+
                         </form>
 
                     </div>
@@ -65,7 +66,8 @@
             </section>
 
             <div class="col-sm-2">
-                <form class="go_event" action="Like.php" method="post">
+                <form class="go_event" action="likeIdee.php" method="post">
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
 
