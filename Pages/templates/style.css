@@ -68,7 +68,7 @@
     }
 
 
-    li.active a {
+    li.active a{
         background-color: #E00A0A;
         color: white;
 
@@ -119,8 +119,17 @@
         width: auto;
     }
 
+.table_event{
+            border: 4px #999999 groove;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+}
 
 
+.go_event{
+    margin-top:10px;
+}
 
 
 
