@@ -13,9 +13,9 @@
     session_start();
 
 
-        if (!isset($_SESSION['id'])) {
-            header("Location: index.php");
-        }
+      //  if (!isset($_SESSION['id'])) {
+      //      header("Location: index.php");
+      //  }
     ?>
     <head>
         <meta charset="utf=8" />
@@ -39,9 +39,10 @@
             </div>
 <?php
             include('connexiondb.php');
-            $requeteEvent = $bdd->query('SELECT * FROM events');
-            $event = $requeteEvent->fetch();
-            while (!$event  != NULL)
+            $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
+
+
+            while ($event = $requeteEvent->fetch())
             {
                 ?>
             <section class="table_event col-sm-8">

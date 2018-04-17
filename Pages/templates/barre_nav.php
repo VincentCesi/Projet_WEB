@@ -9,7 +9,11 @@
                 <li class="bar4"><a href="#association">Associations</a></li>
                 <li class="bar5"><a href="#bde">BDE</a></li>
                 <li class="bar6"><a href="#galerie">Galerie</a></li>
+                <?php
+                    if (isset($_SESSION['id'])) {
+                    if ($_SESSION['id'] == 3) { ?>
                 <li><a href="formereport.php">Signaler</a></li>
-
+                   <?php
+                                              }}?>
             </ul>
             </div>
