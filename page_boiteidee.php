@@ -2,6 +2,7 @@
     include("Pages/templates/bootstrap.php");
 ?>
 
+
 <!DOCTYPE htlm>
 <html>
 
@@ -26,6 +27,7 @@
 
     <body>
         <div id="onglet" class="col-lg-12">
+
             <div class="col-sm-2">
                 <?php
                 include("Pages/templates/barre_nav.php");
@@ -35,29 +37,19 @@
                 </script>
             </div>
 
-            <section class="table_event col-sm-8">
-                <div class="row">
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="liste_event col-sm-12">
-                                Titre
-                            </div>
 
-                            <div class="liste_event col-sm-12">
-                                Description
-                            </div>
 
-                            <div class="liste_event col-sm-12">
-                                Auteur
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-2" >
-                        <button>Voir les informations sur cet évènement</button>
-                    </div>
-                </div>
-            </section>
+            <div class="col-sm-8">
+                <h3>allouibonjouretlkzbneknjb fg brb jb rbngrzbznztrnbrt"irtfbvbvhfbvbvzovrijvnnv   rfvv</h3>
+
+            </div>
+
+
+
+
+
+
 
 
             <div class="col-sm-2">
