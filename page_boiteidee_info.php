@@ -8,7 +8,9 @@
     session_start();
         if (!isset($_SESSION['id'])) {
             header("Location: index.php");
+
         }
+
     ?>
     <head>
         <meta charset="utf=8" />
@@ -21,6 +23,15 @@
 
 
     <body>
+        <?php
+
+            $idEvent = $_POST['id_evenement'];
+            echo $idEvent;
+            include('connexiondb.php');
+            $requeteEvent = $bdd->prepare("SELECT * FROM events WHERE ID_Event = ?");
+            $requeteEvent->execute(array($idEvent));
+            $event = $requeteEvent->fetch();
+        ?>
         <div id="onglet" class="col-lg-12">
             <div class="col-sm-2">
                 <?php
@@ -33,19 +44,15 @@
 
             <section class="col-sm-8">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h3>Titre</h3>
-                    </div>
 
                     <div class="col-sm-12">
-                        <form action="" method="">
-                            Titre_text
-                            <br>
-                            Description_text
-                            <br>
-                            Auteur_text
-                            <br>
-                            Date_text
+                          <form  >
+                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                                    <br>
+                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <br>
+                                <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
+                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_Event']; ?>"/>
                         </form>
 
                     </div>

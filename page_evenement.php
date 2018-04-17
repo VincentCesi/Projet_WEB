@@ -50,12 +50,12 @@
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="post" >
-                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                                <form  method="post">
+                                    <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                     <br>
-                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
-                                <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
+                                    <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
                                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                                 </form>
 
@@ -65,7 +65,7 @@
 
 
                     <div class="col-sm-2" >
-                        <button type="submit" >Voir les informations sur cet évènement</button>
+                        <a href="page_evenement_info.php" >Voir les informations sur cet évènement</a>
                     </div>
                 </div>
 <?php

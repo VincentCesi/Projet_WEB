@@ -51,13 +51,14 @@
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="post" >
+                                <form method="post" action="page_boiteidee_info.php" >
                                 <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                     <br>
                                 <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                 <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_Event']; ?>"/>
+                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Event']; ?>"/>
+
                                 </form>
 
                             </div>
@@ -66,20 +67,13 @@
 
 
                     <div class="col-sm-2" >
-                        <button type="submit" >Voir les informations sur cet évènement</button>
+                        <button type="submit">Voir les informations sur cet évènement</button>
                     </div>
                 </div>
 <?php
             }
 ?>
             </section>
-
-
-
-
-
-
-
 
             <div class="col-sm-2">
                 <ul>

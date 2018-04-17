@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="col-sm-12">
-                        <form action="" method="">
+                        <form action="page_proposer_event.php" method="post">
                             Titre_text
                             <br>
                             Description_text
