@@ -21,6 +21,16 @@
 
 
     <body>
+
+        <?php
+            $idEvent = $_POST['id_evenement'];
+
+            include('connexiondb.php');
+            $requeteEvent = $bdd->prepare("SELECT * FROM eventValidated WHERE ID_EventValidated = ?");
+            $requeteEvent->execute(array($idEvent));
+            $event = $requeteEvent->fetch();
+
+        ?>
         <div id="onglet" class="col-lg-12">
             <div class="col-sm-2">
                 <?php
@@ -33,19 +43,21 @@
 
             <section class="col-sm-8">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h3>Titre</h3>
-                    </div>
 
                     <div class="col-sm-12">
                         <form action="page_proposer_event.php" method="post">
-                            Titre_text
-                            <br>
-                            Description_text
-                            <br>
-                            Auteur_text
-                            <br>
-                            Date_text
+                            <div class="col-sm-12">
+                                <h3><div class="Titre"  id="titre"><?= $event['Title']; ?></div></h3>
+                             </div>
+
+                                <br>
+                            <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                <br>
+                            <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
+                                <br>
+                            <div class="DateStart"   id="DateStart">Début des inscriptions: <?= $event['StartDate']; ?></div>
+                                <br>
+                            <div class="EndStart"   id="EndStart">Fin des inscriptions: <?= $event['EndDate']; ?></div>
                         </form>
 
                     </div>
@@ -60,14 +72,16 @@
 
                 <form class="go_event" action="participationEvent.php" method="post">
                         <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
+                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                     </form>
 
                 <form action="Like.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
+                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                 </form>
 
                 <form action="" method="">
-                <input type="submit" value="Images" name="" id="">
+                    <input type="submit" value="Images" name="" id="">
                 </form>
             </div>
         </div>

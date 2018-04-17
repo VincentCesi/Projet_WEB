@@ -5,9 +5,11 @@
 
 
 
-    $requeteInsertLike = $bdd->prepare('INSERT INTO thumbup (ID_User, ID_eventValidated) VALUES(:idUsers, :idEvent)');
-    $requeteInsertLike->bindValue(':idUsers', $_SESSION['id'], PDO::PARAM_STR);
+    $requeteInsertLike = $bdd->prepare('INSERT INTO voteidea(ID_Idea, ID_User) VALUES(:idEvent, :idUsers)');
+
     $requeteInsertLike->bindValue(':idEvent', $idEvent, PDO::PARAM_STR);
+    $requeteInsertLike->bindValue(':idUsers', $_SESSION['id'], PDO::PARAM_STR);
+
     $requeteInsertLike->execute();
 header("Location: index.php");
 ?>
