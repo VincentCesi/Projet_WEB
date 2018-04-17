@@ -19,7 +19,7 @@
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Evènement</title>
         <?php
             include("Pages/templates/head_bde.php");
 
@@ -39,7 +39,7 @@
             </div>
 
 
-            <section class="col-sm-10">
+            <section class="col-sm-8">
 <?php
      include('connexiondb.php');
      $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
@@ -73,7 +73,19 @@
 ?>
             </section>
 
+            <div class="col-sm-2">
+                <?php
+                if (isset($_SESSION['id'])) {
 
+                if ($_SESSION['id'] != 0) {
+                    echo "Bienvenue " . $_SESSION['email'];
+
+                    include("Pages/templates/barre_deco.php");
+                    }
+
+                }
+                ?>
+            </div>
 
 
 
