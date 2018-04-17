@@ -36,14 +36,14 @@
         </div>
 <!------ à modifier pour afficher les images depuis la bdd ---------->
             <div>
-             <?php $requete_url = $bdd->query("SELECT UrlImage FROM image");
-    $requete = $requete_url->fetch();
+            <?php $requete_url = $bdd->query("SELECT UrlImage FROM image");
+            $requete = $requete_url->fetch();
 
-    if(!$requete==NULL){
-      do{?>
-          <img src="<?php echo $requete['UrlImage'];  ?>" />
-     <?php } while($requete = $requete_url->fetch());
-    }else{
+            if(!$requete==NULL){
+            do{?>
+                <img src="<?php echo $requete['UrlImage'];  ?>" />
+            <?php } while($requete = $requete_url->fetch());
+            }else{
         // Traiter l'erreur
     }?>
             </div>
