@@ -40,15 +40,22 @@
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">
+                                <form action="" method="">
                                 Titre
+                                </form>
+
                             </div>
 
                             <div class="liste_event col-sm-12">
+                                <form action="" method="">
                                 Description
+                                </form>
                             </div>
 
                             <div class="liste_event col-sm-12">
+                                <form action="" method="">
                                 Auteur
+                                </form>
                             </div>
                         </div>
                     </div>

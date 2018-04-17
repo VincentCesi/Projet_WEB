@@ -51,10 +51,11 @@
             </section>
 
             <div class="col-sm-2">
-                <ul><form action="participationEvent.php" method="post">
+
+                <form class="go_event" action="participationEvent.php" method="post">
                         <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
                     </form>
-                    </ul>
+
                 <form action="Like.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
