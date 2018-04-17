@@ -11,6 +11,8 @@
     </script>
     <?php
     session_start();
+
+
         if (!isset($_SESSION['id'])) {
             header("Location: index.php");
         }
@@ -20,6 +22,7 @@
         <title>Accueil</title>
         <?php
             include("Pages/templates/head_bde.php");
+
         ?>
     </head>
 
@@ -34,18 +37,25 @@
                     $(".bar2").addClass("active");
                 </script>
             </div>
-
+<?php
+            include('connexiondb.php');
+            $requeteEvent = $bdd->query('SELECT * FROM events');
+            $event = $requeteEvent->fetch();
+            while (!$event  != NULL)
+            {
+                ?>
             <section class="table_event col-sm-8">
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="liste_event col-sm-12">
-                                <form action="" method="">
-                                Titre
+                                <form action="post" >
+                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                 <br>
-                                Description
+                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                 <br>
-                                Auteur
+                                <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
+                                <input type='hidden' name="id_evenement" Value="<?= $event['ID']; ?>"/>
                                 </form>
 
                             </div>
@@ -53,12 +63,14 @@
                     </div>
 
                     <div class="col-sm-2" >
-                        <button>Voir les informations sur cet évènement</button>
+                        <button type="submit" >Voir les informations sur cet évènement</button>
                     </div>
                 </div>
             </section>
 
-
+<?php
+            }
+            ?>
             <div class="col-sm-2">
                 <ul>
                     <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
