@@ -31,7 +31,7 @@
                 include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
-                    $(".bar3").addClass("active");
+                    $(".bar2").addClass("active");
                 </script>
             </div>
 
@@ -42,20 +42,12 @@
                             <div class="liste_event col-sm-12">
                                 <form action="" method="">
                                 Titre
-                                </form>
-
-                            </div>
-
-                            <div class="liste_event col-sm-12">
-                                <form action="" method="">
+                                <br>
                                 Description
-                                </form>
-                            </div>
-
-                            <div class="liste_event col-sm-12">
-                                <form action="" method="">
+                                <br>
                                 Auteur
                                 </form>
+
                             </div>
                         </div>
                     </div>

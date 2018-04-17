@@ -34,18 +34,44 @@
             <section class="col-sm-8">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="row">
-                            <h3 class="col-sm-6">allouibonjouretlkzbneknjb fg brb jb rbngrzbznztrnbrt"irtfbvbvhfbvbvzovrijvnnv   rfvv</h3>
-                            <div class="col-sm-6">
-                                <?php
-                                    include("Pages/templates/carousel.php");
-                                ?>
-                            </div>
-                        </div>
+                        <h3>Titre</h3>
+                    </div>
 
-                        <div class="col-md-12">
-                            <h1>Aoernbzbdjflùbznbrznù nrtùn rboinrnbnblnblnbndmbnnbjnsbndfa vjùe</h1>
-                        </div>
+                    <div class="col-sm-12">
+                        <form action="" method="">
+                                Titre_text
+                        </form>
+
+                    </div>
+
+                    <div class="col-sm-12">
+                        Description
+                    </div>
+
+                    <div class="col-sm-12">
+                        <form action="" method="">
+                        Description_txt
+                        </form>
+                    </div>
+
+                    <div class="col-sm-12">
+                        Auteur
+                    </div>
+
+                    <div class="col-sm-12">
+                        <form action="" method="">
+                        Auteur_txt
+                        </form>
+                    </div>
+
+                    <div class="col-sm-12">
+                        Date
+                    </div>
+
+                    <div class="col-sm-12">
+                        <form action="" method="">
+                        Date_txt
+                        </form>
                     </div>
                 </div>
             </section>
@@ -58,6 +84,10 @@
 
                 <form action="Like.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
+                </form>
+
+                <form action="" method="">
+                <input type="submit" value="Images" name="" id="">
                 </form>
             </div>
         </div>
