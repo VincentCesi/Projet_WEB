@@ -43,7 +43,7 @@
             <section class="col-sm-8">
 <?php
      include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
+     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY ID_Event');
      while ($event = $requeteEvent->fetch())
      {
 ?>
@@ -57,7 +57,7 @@
                                 <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                 <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID']; ?>"/>
+                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_Event']; ?>"/>
                                 </form>
 
                             </div>

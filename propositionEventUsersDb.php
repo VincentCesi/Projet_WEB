@@ -13,7 +13,7 @@
     include ('connexiondb.php');
 
         // Requête préparée pour empêcher les injections SQL
-    $requete = $bdd->prepare("INSERT INTO events (title, author, description, ID_users)
+    $requete = $bdd->prepare("INSERT INTO events (Title, Description, Author, ID_User)
     VALUES( :title, :nameAuthor, :description, :id)");
 
     $requete->bindValue(':title', $title, PDO::PARAM_STR);

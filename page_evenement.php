@@ -42,7 +42,7 @@
             <section class="col-sm-10">
 <?php
      include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
+     $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
      while ($event = $requeteEvent->fetch())
      {
 ?>
@@ -56,7 +56,7 @@
                                 <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                 <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID']; ?>"/>
+                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                                 </form>
 
                             </div>
