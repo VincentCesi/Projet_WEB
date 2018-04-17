@@ -40,10 +40,28 @@
 
 
 
-            <div class="col-sm-8">
-                <h3>allouibonjouretlkzbneknjb fg brb jb rbngrzbznztrnbrt"irtfbvbvhfbvbvzovrijvnnv   rfvv</h3>
+            <section class="table_event col-sm-8">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="liste_event col-sm-12">
+                                <form action="" method="">
+                                Titre
+                                <br>
+                                Description
+                                <br>
+                                Auteur
+                                </form>
 
-            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button onclick="location.href = 'page_boiteidee_info.php'">Voir les informations sur cet évènement</button>
+                    </div>
+                </div>
+            </section>
 
 
 

@@ -35,7 +35,7 @@
                 </script>
             </div>
 
-            <section class="table_event col-sm-8">
+            <section class="table_event col-sm-10">
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="row">
@@ -52,26 +52,11 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-2" >
-                        <button>Voir les informations sur cet évènement</button>
+                    <div class="col-sm-2">
+                        <button onclick="location.href = 'page_evenement_ok.php'">Voir les informations sur cet évènement</button>
                     </div>
                 </div>
             </section>
-
-
-            <div class="col-sm-2">
-                <ul>
-                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
-                    <?php
-                        if (isset($_SESSION['role'])) {
-                            if ($_SESSION['role'] == 4){?>
-                            <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
-                            <?php
-                        }
-                    }
-                    ?>
-                </ul>
-            </div>
         </div>
     </body>
 

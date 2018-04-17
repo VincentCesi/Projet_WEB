@@ -27,7 +27,7 @@
                 include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
-                    $(".bar2").addClass("active");
+                    $(".bar3").addClass("active");
                 </script>
             </div>
 
@@ -80,18 +80,11 @@
             </section>
 
             <div class="col-sm-2">
-
-                <form class="go_event" action="participationEvent.php" method="post">
-                        <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
-                    </form>
-
-                <form action="Like.php" method="post">
+                <form class="go_event" action="Like.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
 
-                <form action="" method="">
-                <input type="submit" value="Images" name="" id="">
-                </form>
+
             </div>
         </div>
     </body>
