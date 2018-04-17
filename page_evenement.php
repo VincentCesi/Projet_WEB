@@ -37,15 +37,15 @@
                     $(".bar2").addClass("active");
                 </script>
             </div>
+
+
+            <section class="table_event col-sm-10">
 <?php
      include('connexiondb.php');
      $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY id');
      while ($event = $requeteEvent->fetch())
      {
 ?>
-
-            <section class="table_event col-sm-10">
-
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="row">
