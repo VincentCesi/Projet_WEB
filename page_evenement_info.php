@@ -1,21 +1,21 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
 <html>
     <?php
     session_start();
-        if (!isset($_SESSION['id'])) {
-            header("Location: index.php");
-        }
+    if (!isset($_SESSION['id'])) {
+        header("Location: index.php");
+    }
     ?>
     <head>
         <meta charset="utf=8" />
         <title>Info Event</title>
 
         <?php
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
         ?>
     </head>
 
@@ -23,12 +23,12 @@
     <body>
 
         <?php
-            $idEvent = $_POST['id_evenement'];
+        $idEvent = $_POST['id_evenement'];
 
-            include('connexiondb.php');
-            $requeteEvent = $bdd->prepare("SELECT * FROM eventValidated WHERE ID_EventValidated = ?");
-            $requeteEvent->execute(array($idEvent));
-            $event = $requeteEvent->fetch();
+        include('connexiondb.php');
+        $requeteEvent = $bdd->prepare("SELECT * FROM eventValidated WHERE ID_EventValidated = ?");
+        $requeteEvent->execute(array($idEvent));
+        $event = $requeteEvent->fetch();
 
         ?>
         <div id="onglet" class="col-lg-12">
@@ -48,15 +48,15 @@
                         <form action="page_proposer_event.php" method="post">
                             <div class="col-sm-12">
                                 <h3><div class="Titre"  id="titre"><?= $event['Title']; ?></div></h3>
-                             </div>
+                            </div>
 
-                                <br>
+                            <br>
                             <div class="Description"  id="description"><?= $event['Description']; ?></div>
-                                <br>
+                            <br>
                             <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
-                                <br>
+                            <br>
                             <div class="DateStart"   id="DateStart">Début des inscriptions: <?= $event['StartDate']; ?></div>
-                                <br>
+                            <br>
                             <div class="EndStart"   id="EndStart">Fin des inscriptions: <?= $event['EndDate']; ?></div>
                         </form>
 
@@ -71,19 +71,19 @@
             <div class="col-sm-2">
 
                 <form class="go_event" action="participationEvent.php" method="post">
-                        <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
-                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
-                    </form>
+                    <input type="submit" value="Participation à l'event" name="Participate" id="Participate">
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                </form>
 
                 <form action="likeIdee.php" method="post">
-                <input type="submit" value="J'aime" name="Like" id="Like">
-                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                    <input type="submit" value="J'aime" name="Like" id="Like">
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                 </form>
 
                 <form action="script_transfert_image/Envoieimage.php" method="post">
 
                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
-                   <input type="submit" value="Images" name="" id="">
+                    <input type="submit" value="Images" name="" id="">
                 </form>
             </div>
         </div>
@@ -92,7 +92,7 @@
     <footer>
 
         <?php
-            include("Pages/templates/mention_footer.php");
+        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 
@@ -100,5 +100,5 @@
 
 <?php
 
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>

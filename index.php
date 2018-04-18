@@ -1,5 +1,5 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
@@ -11,9 +11,9 @@
 
         <?php
 
-            session_start();
+        session_start();
 
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
         ?>
     </head>
 
@@ -22,9 +22,9 @@
         <div id="onglet" class="col-md-12">
 
             <div class="col-lg-2">
-            <?php
+                <?php
                 include("Pages/templates/barre_nav.php");
-            ?>
+                ?>
                 <script>
                     $(".bar1").addClass("active");
                 </script>
@@ -35,35 +35,35 @@
                 <div class="txt">
                     <?php
 
-                        print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et ");
+                    print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et ");
 
                     ?>
                 </div>
 
                 <?php
 
-                    include("Pages/templates/carousel.php");
+                include("Pages/templates/carousel.php");
 
                 ?>
             </div>
 
             <div class="col-lg-2">
                 <?php
-        if (isset($_SESSION['id'])) {
+                if (isset($_SESSION['id'])) {
 
-            if ($_SESSION['id'] != 0) {
-                echo "Bienvenue " . $_SESSION['email'];
+                    if ($_SESSION['id'] != 0) {
+                        echo "Bienvenue " . $_SESSION['email'];
 
-                include("Pages/templates/barre_deco.php");
-            }
-        }else {
-            include("Pages/templates/barre_coins.php");
-        }
+                        include("Pages/templates/barre_deco.php");
+                    }
+                }else {
+                    include("Pages/templates/barre_coins.php");
+                }
                 ?>
 
                 <div class="bde">
                     <?php
-                        print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et futurorum timore suspensus angorem animi quam diu potuit emendabat.")
+                    print ("Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et futurorum timore suspensus angorem animi quam diu potuit emendabat.")
                     ?>
                 </div>
             </div>
@@ -78,7 +78,7 @@
     <footer>
 
         <?php
-            include("Pages/templates/mention_footer.php");
+                        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 
@@ -86,6 +86,6 @@
 
 <?php
 
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>
 

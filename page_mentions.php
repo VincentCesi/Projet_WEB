@@ -1,5 +1,5 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
@@ -10,9 +10,9 @@
         <title>Mentions légales</title>
         <?php
 
-            session_start();
+        session_start();
 
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
         ?>
 
     </head>
@@ -22,9 +22,9 @@
         <div id="onglet" class="col-md-12">
 
             <div class="col-lg-3">
-            <?php
+                <?php
                 include("Pages/templates/barre_nav.php");
-            ?>
+                ?>
 
             </div>
 
@@ -62,16 +62,16 @@
 
             <div class="col-lg-3">
                 <?php
-                    if (isset($_SESSION['id'])) {
+                if (isset($_SESSION['id'])) {
 
-                        if ($_SESSION['id'] != 0) {
-                            echo "Bienvenue " . $_SESSION['email'];
+                    if ($_SESSION['id'] != 0) {
+                        echo "Bienvenue " . $_SESSION['email'];
 
-                            include("Pages/templates/barre_deco.php");
-                        }
-                    }else {
-                        include("Pages/templates/barre_coins.php");
+                        include("Pages/templates/barre_deco.php");
                     }
+                }else {
+                    include("Pages/templates/barre_coins.php");
+                }
                 ?>
             </div>
 
@@ -82,7 +82,7 @@
 
     <footer>
         <?php
-            include("Pages/templates/mention_footer.php");
+        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 
@@ -90,5 +90,5 @@
 
 <?php
 
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>
