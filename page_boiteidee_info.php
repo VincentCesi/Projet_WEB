@@ -1,5 +1,7 @@
 <?php
-include("Pages/templates/bootstrap.php");
+
+if(isset($_POST['information'])){
+    include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
@@ -17,7 +19,7 @@ include("Pages/templates/bootstrap.php");
         <title>Info idée</title>
 
         <?php
-        include("Pages/templates/head_bde.php");
+    include("Pages/templates/head_bde.php");
         ?>
     </head>
 
@@ -25,16 +27,16 @@ include("Pages/templates/bootstrap.php");
     <body>
         <?php
 
-        $idEvent = $_POST['id_evenement'];
-        include('connexiondb.php');
-        $requeteEvent = $bdd->prepare("SELECT * FROM ideabox WHERE ID_Idea = ?");
-        $requeteEvent->execute(array($idEvent));
-        $event = $requeteEvent->fetch();
+    $idEvent = $_POST['id_evenement'];
+    include('connexiondb.php');
+    $requeteEvent = $bdd->prepare("SELECT * FROM ideabox WHERE ID_Idea = ?");
+    $requeteEvent->execute(array($idEvent));
+    $event = $requeteEvent->fetch();
         ?>
         <div id="onglet" class="col-lg-12">
             <div class="col-sm-2">
                 <?php
-                include("Pages/templates/barre_nav.php");
+    include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
                     $(".bar3").addClass("active");
@@ -53,7 +55,7 @@ include("Pages/templates/bootstrap.php");
                             <div class="Description"  id="description"><?= $event['Description']; ?></div>
                             <br>
                             <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
-
+                            <button type="submit" name="archive" value="archive">Mettre en archive</button>
                         </form>
 
                     </div>
@@ -79,7 +81,7 @@ include("Pages/templates/bootstrap.php");
     <footer>
 
         <?php
-        include("Pages/templates/mention_footer.php");
+    include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 
@@ -87,5 +89,14 @@ include("Pages/templates/bootstrap.php");
 
 <?php
 
-include("Pages/templates/style.css");
+    include("Pages/templates/style.css");
+}elseif(isset($_POST['archive'])){
+    include('connexiondb.php');
+    $idEvent = $_POST['id_evenement'];
+    $requeteEventDelete = $bdd->prepare("UPDATE ideabox SET Validation = 1 WHERE ID_Idea = ?");
+    $requeteEventDelete->execute(array($idEvent));
+
+    header("Location: page_boiteidee.php");
+
+}
 ?>
