@@ -2,7 +2,7 @@
 
 include('connexiondb.php');
 session_start();
-$description = $_POST['description'];
+$description = $_POST['report'];
 
     $requeteInsertLike = $bdd->prepare('INSERT INTO participate (Description, ID) VALUES(:description ,:idUsers)');
     $requeteInsertLike->bindValue(':description', $_SESSION['id'], PDO::PARAM_STR);
