@@ -22,9 +22,9 @@ session_start();
 
                     include ("connexiondb.php");
 
-                            $test = $bdd->query("SELECT ID_Images FROM images ORDER BY ID_Images DESC LIMIT 1");
+                            $filtrage = $bdd->query("SELECT ID_Images FROM images ORDER BY ID_Images DESC LIMIT 1");
 
-                            $donnees = $test->fetch();
+                            $donnees = $filtrage->fetch();
 
                             if ($donnees == NULL)
                             {
