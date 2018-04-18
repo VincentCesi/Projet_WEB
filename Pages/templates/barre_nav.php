@@ -35,15 +35,15 @@
 
 
 
-        <li class="bar7"><a href="archive.php">Voir archive boite idée</a></li>
+        <li class="bar7"><a href="page_archive.php">Voir archive boite idée</a></li>
         <?php
                 include ('connexiondb.php');
                 $requeteReport = $bdd->query('SELECT * FROM reportation ORDER BY ID_Report');
                 if ($report = $requeteReport->fetch()){ ?>
 
-        <li class="bar8"><a href="reportview.php">Voir les reports /!\</a></li>
+        <li class="bar8"><a href="page_reportview.php">Voir les reports /!\</a></li>
         <?php }else{ ?>
-        <li class="bar8"><a href="reportview.php">Voir les reports</a></li>
+        <li class="bar8"><a href="page_reportview.php">Voir les reports</a></li>
         <?php }?>
         <?php
             }}?>

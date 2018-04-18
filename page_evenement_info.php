@@ -85,6 +85,8 @@ include("Pages/templates/bootstrap.php");
                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                     <input type="submit" value="Envoie Images" name="" id="">
                 </form>
+
+                <button onclick="location.href = 'page_galerie.php';">Galerie</button>
             </div>
         </div>
     </body>
