@@ -17,7 +17,7 @@
                     <?php
                         if (isset($_SESSION['role'])) {
                         if ($_SESSION['role'] != 1) { ?>
-                            <li class="bar6"><a href="#galerie">Galerie</a></li>
+                            <li class="bar6"><a href="page_galerie.php">Galerie</a></li>
                      <?php
                     }}?>
 
