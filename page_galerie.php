@@ -107,19 +107,14 @@ include("Pages/templates/bootstrap.php");
         </div>
     </body>
 
-<<<<<<< HEAD
+
     <footer>
         <?php
         include("Pages/templates/mention_footer.php");
         ?>
     </footer>
-=======
-<footer>
-    <?php
-    include("Pages/templates/mention_footer.php");
-    ?>
-</footer>
->>>>>>> origin/master
+
+
 </html>
 
 <?php
