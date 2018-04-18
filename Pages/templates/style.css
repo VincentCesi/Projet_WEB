@@ -108,7 +108,7 @@
 
         padding: 1em;
         margin-top: 20px;
-        text-align: center;
+        /*text-align: center;*/
         justify-content: flex-end;
         border: 5px #999999 groove;
 
@@ -131,6 +131,13 @@
     margin-top:10px;
 }
 
+.mention_txt {
+    text-align: justify;
+    margin: 0 auto;
+    width: 40em;
+}
 
-
+.mention_titre{
+    text-align: center;
+}
 </style>
