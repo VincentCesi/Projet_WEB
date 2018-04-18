@@ -1,10 +1,9 @@
 <?php
+header( "refresh:5;url=envoieimage.php" );
 
 $idEvent = $_POST['id_evenement'];
 session_start();
 
-
-header( "refresh:5;url=envoieimage.php" );
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
     if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
     {

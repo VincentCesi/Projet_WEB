@@ -12,9 +12,9 @@
     </script>
     <?php
     session_start();
-        if (!isset($_SESSION['id'])) {
+        /*if (!isset($_SESSION['id'])) {
             header("Location: index.php");
-        }
+        }*/
     ?>
     <head>
         <meta charset="utf=8" />
@@ -63,7 +63,7 @@
                     do
                     {
             ?>
-                        <img src="<?php echo $requete['UrlImage'];  ?>" />
+                        <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
                         <?php
                     } while($requete = $requete_url->fetch());
                     }
