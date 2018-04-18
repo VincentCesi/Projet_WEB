@@ -1,4 +1,5 @@
 <?php
+header("Location: index.php");
 $titre = $_POST['Titre'];
 $Author = $_POST['Author'];
 $description = $_POST['description'];
@@ -6,11 +7,6 @@ $dateStart = $_POST['dateStart'];
 $dateEnd = $_POST['dateEnd'];
 $dateAccept = $_POST['dateAccept'];
 
-echo $titre;
-echo $Author;
-echo $dateStart;
-echo $dateEnd;
-echo $dateAccept;
 
 include("connexiondb.php");
  $Attendees = 0;
@@ -28,7 +24,6 @@ VALUES(:titre, :dateAccept, :Author, :description ,:dateStart, :dateEnd, :attend
 
         $requeteParticipation->execute();
 
-//header("Location: index.php");
 ?>
 
 

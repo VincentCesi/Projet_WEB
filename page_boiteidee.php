@@ -89,7 +89,7 @@
                 }
                 ?>
                 <ul>
-                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
+                    <li><a href="soumissionIdeaUser.php">Proposer un évènement</a></li>
                     <?php
                         if (isset($_SESSION['role'])) {
                             if ($_SESSION['role'] == 4){?>
