@@ -60,11 +60,9 @@ include("Pages/templates/bootstrap.php");
 
                             include ("connexiondb.php");
 
-<<<<<<< HEAD
+
                             $requete_url = $bdd->query("SELECT UrlImage FROM images");
-=======
-                            $requete_url = $bdd->query("SELECT UrlImage FROM image");
->>>>>>> origin/master
+
                             $requete = $requete_url->fetch();
 
                             if(!$requete==NULL)
@@ -72,21 +70,6 @@ include("Pages/templates/bootstrap.php");
                                 do
                                 {
                             ?>
-<<<<<<< HEAD
-                            <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
-                            <?php
-                                } while($requete = $requete_url->fetch());
-                            }
-                            else
-                            {
-                                // Traiter l'erreur
-                            }   ?>
-
-                        </div>
-
-                    </div>
-=======
-
                             <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
                             <?php
                                 } while($requete = $requete_url->fetch());
@@ -101,7 +84,10 @@ include("Pages/templates/bootstrap.php");
                     </div>
 
 
->>>>>>> origin/master
+
+
+
+
                 </div>
             </section>
 
@@ -112,14 +98,8 @@ include("Pages/templates/bootstrap.php");
                     if ($_SESSION['id'] != 0) {
                         echo "Bienvenue " . $_SESSION['email'];
 
-<<<<<<< HEAD
                         include("Pages/templates/barre_deco.php");
                     }
-
-=======
-                    include("Pages/templates/barre_deco.php");
->>>>>>> origin/master
-                }
 
             }
             ?>
