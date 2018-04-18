@@ -49,7 +49,6 @@
         <?php }else{ ?>
         <li class="bar8"><a href="reportview.php">Voir les reports</a></li>
         <?php }?>
->>>>>>> origin/master
         <?php
             }}?>
     </ul>
