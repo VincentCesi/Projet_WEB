@@ -12,12 +12,11 @@ include("Pages/templates/bootstrap.php");
         <?php
 
         session_start();
-
+        $_SESSION['galerie'] = 0;
         include("Pages/templates/head_bde.php");
         ?>
     </head>
 
-pouloulou
     <body>
         <div id="onglet" class="col-md-12">
 

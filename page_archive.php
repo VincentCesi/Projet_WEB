@@ -60,7 +60,7 @@ include("Pages/templates/bootstrap.php");
                                     <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Idea']; ?>"/>
 
                                     <div class="col-sm-2" >
-                                        <button type="submit">Voir les informations sur cet évènement</button>
+                                        <button type="submit" name="information" value="information">Voir les informations sur cet évènement</button>
                                     </div>
                                 </form>
 
