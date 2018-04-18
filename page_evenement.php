@@ -1,5 +1,5 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
@@ -13,15 +13,15 @@
     session_start();
 
 
-        if (!isset($_SESSION['id'])) {
-            header("Location: index.php");
-        }
+    if (!isset($_SESSION['id'])) {
+        header("Location: index.php");
+    }
     ?>
     <head>
         <meta charset="utf=8" />
         <title>Evènement</title>
         <?php
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
 
         ?>
     </head>
@@ -40,26 +40,26 @@
 
 
             <section class="col-sm-8">
-<?php
-     include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
-     while ($event = $requeteEvent->fetch())
-     {
-?>
+                <?php
+                include('connexiondb.php');
+                $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
+                while ($event = $requeteEvent->fetch())
+                {
+                ?>
                 <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
                                 <form  method="post" action="page_evenement_info.php">
                                     <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
-                                        <br>
+                                    <br>
                                     <div class="Description"  id="description"><?= $event['Description']; ?></div>
-                                        <br>
+                                    <br>
                                     <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                        <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                                     <div class="col-sm-2" >
-                         <button type="submit">Voir les informations sur cet évènement</button>
-                    </div>
+                                        <button type="submit">Voir les informations sur cet évènement</button>
+                                    </div>
                                 </form>
 
                             </div>
@@ -69,19 +69,19 @@
 
 
                 </div>
-<?php
-            }
-?>
+                <?php
+                }
+                ?>
             </section>
 
             <div class="col-sm-2">
                 <?php
                 if (isset($_SESSION['id'])) {
 
-                if ($_SESSION['id'] != 0) {
-                    echo "Bienvenue " . $_SESSION['email'];
+                    if ($_SESSION['id'] != 0) {
+                        echo "Bienvenue " . $_SESSION['email'];
 
-                    include("Pages/templates/barre_deco.php");
+                        include("Pages/templates/barre_deco.php");
                     }
 
                 }
@@ -97,11 +97,11 @@
 
     <footer>
         <?php
-            include("Pages/templates/mention_footer.php");
+        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 </html>
 
 <?php
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>
