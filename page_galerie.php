@@ -64,7 +64,7 @@ include("Pages/templates/bootstrap.php");
                                 {
                             ?>
 
-                            <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
+                            <img src="/script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
 
                             <?php
                                 } while($requete = $requete_url->fetch());
