@@ -128,7 +128,7 @@
 			    	            </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block" onclick="now();">
+		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block">
                                 </div>
                             </div>
 			    		</form>
