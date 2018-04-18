@@ -76,7 +76,7 @@
         <div class="col-xs-4 col-sm-4 col-md-8 col-lg-8 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-                    <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
+                    <h3 class="panel-title" ><center>Soumission Evenement Validé</center></h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form role="form" action ="propositionEventAdminDb.php" method="post">
@@ -128,7 +128,7 @@
 			    	            </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block" onclick="now();">
+		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block">
                                 </div>
                             </div>
 			    		</form>

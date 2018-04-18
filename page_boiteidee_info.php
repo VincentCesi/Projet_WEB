@@ -8,11 +8,13 @@
     session_start();
         if (!isset($_SESSION['id'])) {
             header("Location: index.php");
+
         }
+
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Info idée</title>
 
         <?php
             include("Pages/templates/head_bde.php");
@@ -21,6 +23,14 @@
 
 
     <body>
+        <?php
+
+            $idEvent = $_POST['id_evenement'];
+            include('connexiondb.php');
+            $requeteEvent = $bdd->prepare("SELECT * FROM events WHERE ID_Event = ?");
+            $requeteEvent->execute(array($idEvent));
+            $event = $requeteEvent->fetch();
+        ?>
         <div id="onglet" class="col-lg-12">
             <div class="col-sm-2">
                 <?php
@@ -33,19 +43,17 @@
 
             <section class="col-sm-8">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h3>Titre</h3>
-                    </div>
 
                     <div class="col-sm-12">
-                        <form action="" method="">
-                            Titre_text
-                            <br>
-                            Description_text
-                            <br>
-                            Auteur_text
-                            <br>
-                            Date_text
+                          <form  >
+                              <div class="col-sm-12">
+                                <h3><div class="Titre"  id="titre"><?= $event['Title']; ?></div></h3>
+                              </div>
+                                    <br>
+                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <br>
+                                <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
+
                         </form>
 
                     </div>
@@ -58,7 +66,8 @@
             </section>
 
             <div class="col-sm-2">
-                <form class="go_event" action="Like.php" method="post">
+                <form class="go_event" action="likeIdee.php" method="post">
+                    <input type='hidden' name="id_evenement_like" Value="<?= $_POST['id_evenement']; ?>"/>
                 <input type="submit" value="J'aime" name="Like" id="Like">
                 </form>
 

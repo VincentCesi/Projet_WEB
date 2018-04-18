@@ -18,7 +18,7 @@
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Accueil</title>
+        <title>Boîte à idée</title>
         <?php
             include("Pages/templates/head_bde.php");
         ?>
@@ -40,37 +40,54 @@
 
 
 
-            <section class="table_event col-sm-8">
-                <div class="row">
+            <section class="col-sm-8">
+<?php
+     include('connexiondb.php');
+     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY ID_Event');
+     while ($event = $requeteEvent->fetch())
+     {
+?>
+                <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
-                            <div class="liste_event col-sm-12">
-                                <form action="" method="">
-                                Titre
-                                <br>
-                                Description
-                                <br>
-                                Auteur
+                            <div class="col-sm-12">
+                                <form method="post" action="page_boiteidee_info.php" >
+                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                                    <br>
+                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <br>
+                                <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
+                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Event']; ?>"/>
+
+                            <div class="col-sm-2" >
+                        <button type="submit">Voir les informations sur cet évènement</button>
+                    </div>
                                 </form>
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-2">
-                        <button onclick="location.href = 'page_boiteidee_info.php'">Voir les informations sur cet évènement</button>
-                    </div>
+
+
                 </div>
+<?php
+            }
+?>
             </section>
 
-
-
-
-
-
-
-
             <div class="col-sm-2">
+                <?php
+                if (isset($_SESSION['id'])) {
+
+                if ($_SESSION['id'] != 0) {
+                    echo "Bienvenue " . $_SESSION['email'];
+
+                    include("Pages/templates/barre_deco.php");
+                    }
+
+                }
+                ?>
                 <ul>
                     <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
                     <?php
@@ -80,8 +97,12 @@
                             <?php
                         }
                     }
+
                     ?>
+
+
                 </ul>
+
             </div>
         </div>
     </body>

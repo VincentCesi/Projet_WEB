@@ -1,5 +1,10 @@
 <?php
-header( "refresh:5;url=envoieimage.php" );
+
+$idEvent = $_POST['id_evenement'];
+session_start();
+
+
+//header( "refresh:5;url=envoieimage.php" );
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
     if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
     {
@@ -17,25 +22,27 @@ header( "refresh:5;url=envoieimage.php" );
 
                     include ("connexiondb.php");
 
-                            $test = $bdd->query("SELECT ID FROM image ORDER BY ID DESC LIMIT 1");
+                            $test = $bdd->query("SELECT ID_Images FROM images ORDER BY ID_Images DESC LIMIT 1");
 
                             $donnees = $test->fetch();
 
                             if ($donnees == NULL)
                             {
-                                $donnees['ID'] = 1;
+                                $donnees['ID_Images'] = 1;
                             }
 
                             else
                             {
-                                $donnees['ID'] ++;
+                                $donnees['ID_Images'] ++;
                             }
 
-                            $urlimage = 'uploads/' . $donnees['ID'] . $extension;
+                            $urlimage = 'uploads/' . $donnees['ID_Images'] . $extension;
 
-                            $requete_envoie = $bdd->prepare("INSERT INTO image (UrlImage) VALUES(:urlimage)");
+                            $requete_envoie = $bdd->prepare("INSERT INTO images (UrlImage, ID_User, ID_EventValidated) VALUES(:urlimage, :idUser, :idEvent)");
 
                             $requete_envoie->bindValue(':urlimage', $urlimage, PDO::PARAM_STR);
+                            $requete_envoie->bindValue(':idUser', $_SESSION['id'], PDO::PARAM_STR);
+                            $requete_envoie->bindValue(':idEvent', $idEvent, PDO::PARAM_STR);
 
                             $requete_envoie->execute();
 
