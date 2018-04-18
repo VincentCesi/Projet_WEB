@@ -4,16 +4,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-
-        function verificationTotale(){
-            if (TestFullForm < 2){
-                window.alert("vous n'avez pas remplis tout les champs");
-
-                window.alert("Value test =  " +TestFullForm);
-            }
-            else
-                window.alert("merci de votre inscription");
-        }
     </script>
 <!--  Ensemble des liens et scripts nécessaire à la date -->
 <!--  jQuery -->
@@ -25,10 +15,10 @@
 
 <script>
     $(document).ready(function(){
-      var date_input=$('input[name="eventDate"]'); //notre injection de date a pour nom "eventDate"
+      var date_input=$('input[name="dateStart"]'); //notre injection de date a pour nom "dateStart"
 
       var options={
-        format: "yyyy/mm/dd",
+        format: "yyyy-mm-dd",
         clearBtn: true,
         keyboardNavigation: true,
         startDate: "now",
@@ -37,10 +27,22 @@
       date_input.datepicker(options);
     })
     $(document).ready(function(){
-      var date_input=$('input[name="dateAccept"]'); //notre injection de date a pour nom "nowDate"
+      var date_input=$('input[name="dateEnd"]'); //notre injection de date a pour nom "dateEnd"
 
       var options={
-        format: "yyyy/mm/dd",
+        format: "yyyy-mm-dd",
+        clearBtn: true,
+        keyboardNavigation: true,
+        startDate: "now",
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+    $(document).ready(function(){
+      var date_input=$('input[name="dateAccept"]'); //notre injection de date a pour nom "dateAccept"
+
+      var options={
+        format: "yyyy-mm-dd",
         todayBtn:"true",
         keyboardNavigation: true,
         startDate: "now",
@@ -91,7 +93,7 @@
                             <div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-12">
 			    					<div class="form-group">
-			    						<input type="text" name="nameAuthor" id="nameAuthor" class="form-control input-sm" placeholder="Votre nom" required>
+			    						<input type="text" name="Author" id="Author" class="form-control input-sm" placeholder="Votre nom">
 			    					</div>
 			    				</div>
 			    			</div>
@@ -104,12 +106,12 @@
                                     <div class="row">
                                         <div class="col-md-4 col-sm-4 col-xs-4">
                                             <div class="form-group">
-                                                    <input class="form-control" id="date" name="eventDate" placeholder="Date de début" type="text" required/>
+                                                    <input class="form-control" id="dateEnd" name="dateEnd" placeholder="Date de début" type="text" required/>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4">
                                             <div class="form-group">
-                                                    <input class="form-control" id="date" name="eventDate" placeholder="Date de fin" type="text" required/>
+                                                    <input class="form-control" id="dateStart" name="dateStart" placeholder="Date de fin" type="text" required/>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4">

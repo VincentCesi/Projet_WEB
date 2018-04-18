@@ -27,7 +27,7 @@
 
             $idEvent = $_POST['id_evenement'];
             include('connexiondb.php');
-            $requeteEvent = $bdd->prepare("SELECT * FROM events WHERE ID_Event = ?");
+            $requeteEvent = $bdd->prepare("SELECT * FROM ideabox WHERE ID_Idea = ?");
             $requeteEvent->execute(array($idEvent));
             $event = $requeteEvent->fetch();
         ?>

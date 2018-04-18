@@ -43,7 +43,7 @@
             <section class="col-sm-8">
 <?php
      include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM ideabox ORDER BY ID_Idea');
+     $requeteEvent = $bdd->query('SELECT * FROM ideabox WHERE Validation = 0 ORDER BY ID_Idea');
      while ($event = $requeteEvent->fetch())
      {
 ?>
@@ -57,7 +57,7 @@
                                 <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                 <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Event']; ?>"/>
+                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Idea']; ?>"/>
 
                             <div class="col-sm-2" >
                         <button type="submit">Voir les informations sur cet évènement</button>
