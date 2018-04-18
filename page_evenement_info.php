@@ -6,6 +6,7 @@ include("Pages/templates/bootstrap.php");
 <html>
     <?php
     session_start();
+    $_SESSION['galerie']=1;
     if (!isset($_SESSION['id'])) {
         header("Location: index.php");
     }
@@ -23,6 +24,7 @@ include("Pages/templates/bootstrap.php");
     <body>
 
         <?php
+        $_SESSION['EventID']=$_POST['id_evenement'];
         $idEvent = $_POST['id_evenement'];
 
         include('connexiondb.php');
