@@ -8,6 +8,7 @@
    $description = $_POST['description'];
 
     $validated = 0 ;
+    $event = 0 ;
     session_start();
 
 
