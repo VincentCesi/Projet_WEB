@@ -54,13 +54,14 @@ include("Pages/templates/bootstrap.php");
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form method="post" action="page_boiteidee_info.php" >
+                                <form method="post" action="testDeleteReport.php" >
 
                                     <div class="Titre"  id="auteur"><?= $reportUser['Email']; ?></div>
                                     <br>
                                     <div class="Description"  id="report"><?= $report['Description']; ?></div>
                                     <br>
                                     <input type='hidden' name="id_report" id="id_report" value="<?= $report['ID_Report']; ?>"/>
+                                    <button type="submit" name="report" value="report">Supprimer la demande</button>
                                 </form>
 
                             </div>
