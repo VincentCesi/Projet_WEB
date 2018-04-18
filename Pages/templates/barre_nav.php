@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 <div class="nav">
 
     <ul>
@@ -31,6 +26,7 @@
             if ($_SESSION['role'] == 3) { ?>
         <li><a href="formereport.php">Signaler</a></li>
 
+        <?php
             }}?>
 
         <?php
