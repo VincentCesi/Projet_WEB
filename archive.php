@@ -2,6 +2,7 @@
 include("Pages/templates/bootstrap.php");
 ?>
 
+
 <!DOCTYPE htlm>
 <html>
 
@@ -11,38 +12,38 @@ include("Pages/templates/bootstrap.php");
     </script>
     <?php
     session_start();
-
-
     if (!isset($_SESSION['id'])) {
         header("Location: index.php");
     }
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Evènement</title>
+        <title>Boîte à idée</title>
         <?php
         include("Pages/templates/head_bde.php");
-
         ?>
     </head>
 
 
     <body>
         <div id="onglet" class="col-lg-12">
+
             <div class="col-sm-2">
                 <?php
                 include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
-                    $(".bar2").addClass("active");
+                    $(".bar3").addClass("active");
                 </script>
             </div>
+
+
 
 
             <section class="col-sm-8">
                 <?php
                 include('connexiondb.php');
-                $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
+                $requeteEvent = $bdd->query('SELECT * FROM ideabox WHERE Validation = 1 ORDER BY ID_Idea');
                 while ($event = $requeteEvent->fetch())
                 {
                 ?>
@@ -50,13 +51,14 @@ include("Pages/templates/bootstrap.php");
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form  method="post" action="page_evenement_info.php">
+                                <form method="post" action="page_boiteidee_info.php" >
                                     <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                     <br>
                                     <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
                                     <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Idea']; ?>"/>
+
                                     <div class="col-sm-2" >
                                         <button type="submit">Voir les informations sur cet évènement</button>
                                     </div>
@@ -86,12 +88,22 @@ include("Pages/templates/bootstrap.php");
 
                 }
                 ?>
+                <ul>
+                    <li><a href="soumissionIdeaUser.php">Proposer un évènement</a></li>
+                    <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] == 4){?>
+                    <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
+                    <?php
+                        }
+                    }
+
+                    ?>
+
+
+                </ul>
+
             </div>
-
-
-
-
-
         </div>
     </body>
 
