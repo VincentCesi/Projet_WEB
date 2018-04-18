@@ -17,16 +17,6 @@
 
 <body>
 
-<?php
-
-    include ("connexiondb.php");
-
-
-    //$url = implode("", $requete);
-   //echo $url;
-
-?>
-
     <div class="conteneur">
 
         <div class="row">
@@ -36,16 +26,28 @@
         </div>
 <!------ à modifier pour afficher les images depuis la bdd ---------->
             <div>
-            <?php $requete_url = $bdd->query("SELECT UrlImage FROM image");
-            $requete = $requete_url->fetch();
 
-            if(!$requete==NULL){
-            do{?>
-                <img src="<?php echo $requete['UrlImage'];  ?>" />
-            <?php } while($requete = $requete_url->fetch());
-            }else{
+            <?php
+
+                include ("connexiondb.php");
+
+                $requete_url = $bdd->query("SELECT UrlImage FROM image");
+                $requete = $requete_url->fetch();
+
+                    if(!$requete==NULL)
+                    {
+                    do
+                    {
+            ?>
+                        <img src="<?php echo $requete['UrlImage'];  ?>" />
+                        <?php
+                    } while($requete = $requete_url->fetch());
+                    }
+                    else
+                    {
         // Traiter l'erreur
-    }?>
+                    }   ?>
+
             </div>
 
         </div>
