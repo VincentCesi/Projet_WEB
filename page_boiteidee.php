@@ -43,7 +43,7 @@
             <section class="col-sm-8">
 <?php
      include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM events ORDER BY ID_Event');
+     $requeteEvent = $bdd->query('SELECT * FROM ideabox ORDER BY ID_Idea');
      while ($event = $requeteEvent->fetch())
      {
 ?>

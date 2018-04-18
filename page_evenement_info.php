@@ -75,7 +75,7 @@
                      <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                     </form>
 
-                <form action="Like.php" method="post">
+                <form action="likeIdee.php" method="post">
                 <input type="submit" value="J'aime" name="Like" id="Like">
                      <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                 </form>
