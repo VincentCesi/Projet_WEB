@@ -18,7 +18,7 @@ include("Pages/templates/bootstrap.php");
     ?>
     <head>
         <meta charset="utf=8" />
-        <title>Boîte à idée</title>
+        <title>Archive boîte</title>
         <?php
         include("Pages/templates/head_bde.php");
         ?>
@@ -33,7 +33,7 @@ include("Pages/templates/bootstrap.php");
                 include("Pages/templates/barre_nav.php");
                 ?>
                 <script>
-                    $(".bar3").addClass("active");
+                    $(".bar7").addClass("active");
                 </script>
             </div>
 

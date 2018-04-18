@@ -80,18 +80,6 @@ include("Pages/templates/bootstrap.php");
 
                         </div>
 
-
-
-                        <img src="/script_transfert_image/<?php echo $requete['UrlImage'];  ?>" />
-
-                        <?php
-                        } while($requete = $requete_url->fetch());
-                        }
-                        else
-                        {
-                            // Traiter l'erreur
-                        }   ?>
-
                     </div>
 
 
