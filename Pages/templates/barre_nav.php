@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/master
 <div class="nav">
 
     <ul>
@@ -15,6 +18,20 @@
         <li class="bar4"><a href="page_association.php">Associations</a></li>
         <li class="bar5"><a href="page_bde.php">BDE</a></li>
 
+<<<<<<< HEAD
+        <?php
+        if (isset($_SESSION['role'])) {
+            if ($_SESSION['role'] != 1) { ?>
+        <li class="bar6"><a href="page_galerie.php">Galerie</a></li>
+        <?php
+            }}?>
+        <li class="bar6"><a href="page_galerie.php">Galerie</a></li>
+
+        <?php
+        if (isset($_SESSION['role'])) {
+            if ($_SESSION['role'] == 3) { ?>
+        <li><a href="formereport.php">Signaler</a></li>
+=======
         <li class="bar6"><a href="page_galerie.php">Galerie</a></li>
 
         <?php
@@ -40,6 +57,7 @@
         <?php }else{ ?>
         <li class="bar8"><a href="reportview.php">Voir les reports</a></li>
         <?php }?>
+>>>>>>> origin/master
         <?php
             }}?>
     </ul>
