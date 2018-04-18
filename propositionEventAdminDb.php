@@ -1,30 +1,29 @@
 <?php
+header("Location: index.php");
 $titre = $_POST['Titre'];
-$author = $_POST['nameAuthor'];
+$Author = $_POST['Author'];
 $description = $_POST['description'];
 $dateStart = $_POST['dateStart'];
 $dateEnd = $_POST['dateEnd'];
-$image = $_POST['Image'];
 $dateAccept = $_POST['dateAccept'];
 
 
 include("connexiondb.php");
- $Attendees = 1;
+ $Attendees = 0;
 
-$requeteParticipation = $bdd->prepare('INSERT INTO participate (Title, Author, Description, AcceptionDate,StartDate, EndDate, urlImage, Attendees)
-VALUES(:titre, :description, :dateAccept ,:dateStart, :dateEnd, :image)');
+$requeteParticipation = $bdd->prepare('INSERT INTO eventvalidated (Title, AcceptationDate, Author, Description, StartDate, EndDate, Attendees)
+VALUES(:titre, :dateAccept, :Author, :description ,:dateStart, :dateEnd, :attendees)');
+
         $requeteParticipation->bindValue(':titre', $titre, PDO::PARAM_STR);
-        $requeteParticipation->bindValue(':author', $author, PDO::PARAM_STR);
-        $requeteParticipation->bindValue(':description', $description, PDO::PARAM_STR);
         $requeteParticipation->bindValue(':dateAccept', $dateAccept, PDO::PARAM_STR);
+        $requeteParticipation->bindValue(':Author', $Author, PDO::PARAM_STR);
+        $requeteParticipation->bindValue(':description', $description, PDO::PARAM_STR);
         $requeteParticipation->bindValue(':dateStart', $dateStart, PDO::PARAM_STR);
         $requeteParticipation->bindValue(':dateEnd',$dateEnd, PDO::PARAM_STR);
-        $requeteParticipation->bindValue(':image', $image, PDO::PARAM_STR);
-
+        $requeteParticipation->bindValue(':attendees', $Attendees, PDO::PARAM_STR);
 
         $requeteParticipation->execute();
 
-header("Location: index.php");
 ?>
 
 

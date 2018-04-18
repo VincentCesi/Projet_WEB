@@ -8,10 +8,10 @@
         <div class="col-xs-2 col-sm-12 col-md-10 col-lg-6 col-sm-offset-4 col-md-offset-8">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-                    <h3 class="panel-title" ><center>Soumission Evenement </center></h3>
+                    <h3 class="panel-title" ><center>Veuillez soumettre votre idée</center></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" action ="propositionEventUsersDb.php" method="post">
+			    		<form role="form" action ="propositionIdeaUser.php" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
@@ -33,6 +33,13 @@
 			    					<div class="form-group">
                                         <textarea rows="6" type="text" name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 			    					</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+			    	                <div class="checkbox">
+                                    <label><input type="checkbox" name="event" id="event" value="1">Est-ce un evenement ?</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
