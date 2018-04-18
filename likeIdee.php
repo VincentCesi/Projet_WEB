@@ -1,7 +1,8 @@
 <?php
-    $idEvent = $_POST['id_evenement_like'];
     include('connexiondb.php');
     session_start();
+
+    $idEvent = $_POST['id_evenement_like'];
 
     $requeteInsertLike = $bdd->prepare('INSERT INTO voteidea(ID_Idea, ID_User) VALUES(:idEvent, :idUsers)');
 

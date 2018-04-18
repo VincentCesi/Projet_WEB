@@ -80,8 +80,10 @@
                      <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                 </form>
 
-                <form action="" method="">
-                    <input type="submit" value="Images" name="" id="">
+                <form action="script_transfert_image/Envoieimage.php" method="post">
+
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                   <input type="submit" value="Images" name="" id="">
                 </form>
             </div>
         </div>

@@ -4,10 +4,10 @@
     session_start();
     $idEvent = $_POST['id_evenement'];
 
-    $requeteInsertLike = $bdd->prepare('INSERT INTO participate (ID_User, ID_eventValidated) VALUES(:idUsers, :idEvent)');
-    $requeteInsertLike->bindValue(':idUsers', $_SESSION['id'], PDO::PARAM_STR);
-    $requeteInsertLike->bindValue(':idEvent', $idEvent, PDO::PARAM_STR);
-    $requeteInsertLike->execute();
+    $requeteParticipate = $bdd->prepare('INSERT INTO participate (ID_User, ID_eventValidated) VALUES(:idUsers, :idEvent)');
+    $requeteParticipate->bindValue(':idUsers', $_SESSION['id'], PDO::PARAM_STR);
+    $requeteParticipate->bindValue(':idEvent', $idEvent, PDO::PARAM_STR);
+    $requeteParticipate->execute();
 
 header("Location: index.php");
 ?>
