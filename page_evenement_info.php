@@ -35,6 +35,7 @@ include("Pages/templates/bootstrap.php");
 
         ?>
         <div id="onglet" class="col-lg-12">
+            <div class="row">
             <div class="col-sm-2">
                 <?php
                 include("Pages/templates/barre_nav.php");
@@ -131,7 +132,7 @@ include("Pages/templates/bootstrap.php");
                 </div>
             </div>
 
-
+        </div>
         </div>
 
     </body>

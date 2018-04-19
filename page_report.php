@@ -24,49 +24,50 @@ include("Pages/templates/bootstrap.php");
 
     <body>
         <div id="onglet" class="col-lg-12">
-            <div class="col-sm-2">
-                <?php
-                include("Pages/templates/barre_nav.php");
-                ?>
-                <script>
-                    $(".bar9").addClass("active");
-                </script>
-            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <?php
+                    include("Pages/templates/barre_nav.php");
+                    ?>
+                    <script>
+                        $(".bar9").addClass("active");
+                    </script>
+                </div>
 
 
-            <div class="col-sm-8">
-                <h3>Report</h3>
+                <div class="col-sm-8">
+                    <h3>Report</h3>
 
-                <form action="testReport.php" method="post">
+                    <form action="testReport.php" method="post">
 
-                    <p>
-                        <label for="report">Expliquez ici votre problème.</label><br />
-                        <textarea rows="6" cols="90" maxlength="500" name="report" required></textarea>
-                        <input type="submit" value="Envoyer" />
-                    </p>
+                        <p>
+                            <label for="report">Expliquez ici votre problème.</label><br />
+                            <textarea rows="6" cols="90" maxlength="500" name="report" required></textarea>
+                            <input type="submit" value="Envoyer" />
+                        </p>
 
-                </form>
-            </div>
+                    </form>
+                </div>
 
-            <div class="col-lg-2">
-                <?php
-                if (isset($_SESSION['id'])) {
+                <div class="col-lg-2">
+                    <?php
+                    if (isset($_SESSION['id'])) {
 
-                    if ($_SESSION['id'] != 0) {
-                        echo "Bienvenue " . $_SESSION['email'];
+                        if ($_SESSION['id'] != 0) {
+                            echo "Bienvenue " . $_SESSION['email'];
 
-                        include("Pages/templates/barre_deco.php");
+                            include("Pages/templates/barre_deco.php");
+                        }
+                    }else {
+                        include("Pages/templates/barre_coins.php");
                     }
-                }else {
-                    include("Pages/templates/barre_coins.php");
-                }
-                ?>
+                    ?>
+                </div>
+
+
+
+
             </div>
-
-
-
-
-
         </div>
     </body>
 
