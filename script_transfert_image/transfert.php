@@ -35,7 +35,7 @@ if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
                 $donnees['ID_Images'] ++;
             }
 
-            $urlimage = 'uploads/' . $donnees['ID_Images'] . $extension;
+            $urlimage = '../images/evenement/' . $donnees['ID_Images'] . $extension;
 
             $requete_envoie = $bdd->prepare("INSERT INTO images (UrlImage, ID_User, ID_EventValidated) VALUES(:urlimage, :idUser, :idEvent)");
 

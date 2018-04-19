@@ -7,10 +7,10 @@
 
 <?php
 //index.php
-$bdd = new PDO('mysql:host=localhost;dbname=testing;charset=utf8', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8', 'root', '');
 function make_query($bdd)
 {
- $reponse = $bdd->prepare('SELECT * FROM banner');
+ $reponse = $bdd->prepare('SELECT * FROM images');
  $reponse -> execute();
  return $reponse;
 }
@@ -55,7 +55,7 @@ function make_slides($bdd)
    $output .= '<div class="item">';
   }
   $output .= '
-   <img src="images/evenement/'.$row["banner_image"].'" style="height:450px;margin:auto;" />
+   <img src="images/evenement/'.$row["ID_Images"].'" style="height:450px;margin:auto;" />
    <div class="carousel-caption">
    </div>
   </div>

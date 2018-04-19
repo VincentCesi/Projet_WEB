@@ -82,9 +82,6 @@ include("Pages/templates/bootstrap.php");
                             }
                             else
                             {
-                                $requeteSQl = "SELECT UrlImage FROM images";
-                                $requete_url = $bdd->query($requeteSQl);
-                                $requete = $requete_url->fetch();
 
                                 do
                                 {
