@@ -1,6 +1,6 @@
 <?php
 
-header("Location: boite_event_info.php");
+header("Location: page_evenement.php");
 $commentaire = $_POST['commentaire'];
 $idEvent = $_POST['id_evenement'];
 session_start();
