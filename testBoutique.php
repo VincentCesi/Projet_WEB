@@ -1,13 +1,32 @@
 <?php
-header("Location: page_reportview.php");
+//header("Location: page_reportview.php");
 session_start();
 include('connexiondb.php');
+$product = $_POST['product'];
+$description = $_POST['description'];
+$price = $_POST['price'];
+$stock = $_POST['quantity'];
+$category = $_POST['category'];
+$quantitybought = 0;
 
-    $requeteNewShop = $bdd->prepare("INSERT INTO shop(Product, Price, urlImage, Stock, Stock, Available, ) FROM reportation  WHERE ID_Report = ?");
-    $requeteNewShop->bindValue(':firstname', $firstname, PDO::PARAM_STR);
-    $requeteNewShop->bindValue(':name', $name, PDO::PARAM_STR);
-    $requeteNewShop->bindValue(':email', $email, PDO::PARAM_STR);
-    $requeteNewShop->bindValue(':hash', $hash, PDO::PARAM_STR);
-    $requeteNewShop->bindValue(':role', $role, PDO::PARAM_STR);
 
+    if(!empty($_POST['available'])){
+        $available = $_POST['available'];
+
+    }else{
+        $available = 0;
+
+    }
+
+
+$requeteNewShop = $bdd->prepare("INSERT INTO shop(Product, Description, Price, Stock, Available, QuantityBought, ID_User, Id_category) VALUES (:product, :description, :price, :stock, :available, :quantitybuy, :idUser, :category");
+$requeteNewShop->bindValue(':product', $product, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':description', $description, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':price', $price, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':stock', $stock, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':available', $available, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':quantitybuy', $quantitybought, PDO::PARAM_STR);
+$requeteNewShop->bindValue(':idUser', $_SESSION['id'], PDO::PARAM_STR);
+$requeteNewShop->bindValue(':category', $category, PDO::PARAM_STR);
+$requeteNewShop->execute();
 ?>
