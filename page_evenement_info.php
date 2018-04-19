@@ -120,7 +120,7 @@ include("Pages/templates/bootstrap.php");
                              $requeteAuthor = $requeteCommentAuthor->fetch();
                         ?>
                         <div class="modal-header">
-                            <?= $requeteAuthor['Email']; ?>
+                            <?= $requeteAuthor['Email']; ?> écrit le <?= $comment['PostDate']; ?>
                         </div>
                         <div class="modal-body">
                             <?= $comment['Content']; ?>
