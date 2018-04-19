@@ -23,7 +23,7 @@
                             <div class="row">
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-			    						<input type="text" name="nameAuthor" id="nameAuthor" class="form-control input-sm" placeholder="Votre nom" required>
+			    						<input type="text" name="Author" id="Author" class="form-control input-sm" placeholder="Votre nom" required>
 			    					</div>
 			    				</div>
 			    			</div>

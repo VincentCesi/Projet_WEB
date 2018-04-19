@@ -61,7 +61,16 @@ include("Pages/templates/bootstrap.php");
                             include ("connexiondb.php");
 
 
-                            $requete_url = $bdd->query("SELECT UrlImage FROM images");
+                            $EventGalleryID = $_SESSION['EventID'];
+                            echo $_SESSION['galerie'];
+                            if ($_SESSION['galerie'] = 1) {
+                                $requeteSQl = "SELECT UrlImage FROM images";
+                            }
+                            else {
+                            $requeteSQl = "SELECT UrlImage FROM images";
+                            }
+                            //$requeteSQl = 'SELECT UrlImage FROM images ';
+                            $requete_url = $bdd->query($requeteSQl);
 
                             $requete = $requete_url->fetch();
 
@@ -107,14 +116,11 @@ include("Pages/templates/bootstrap.php");
         </div>
     </body>
 
-
-    <footer>
-        <?php
-        include("Pages/templates/mention_footer.php");
-        ?>
-    </footer>
-
-
+<footer>
+    <?php
+    include("Pages/templates/mention_footer.php");
+    ?>
+</footer>
 </html>
 
 <?php
