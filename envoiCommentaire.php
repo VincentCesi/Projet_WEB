@@ -1,6 +1,6 @@
 <?php
 
-
+header("Location: boite_event_info.php");
 $commentaire = $_POST['commentaire'];
 $idEvent = $_POST['id_evenement'];
 session_start();
@@ -13,4 +13,5 @@ $requete->bindValue(':commentaire', $commentaire, PDO::PARAM_STR);
 $requete->bindValue(':idevent', $idEvent, PDO::PARAM_STR);
 $requete->bindValue(':user', $_SESSION['id'], PDO::PARAM_STR);
 $requete->execute();
+
 ?>
