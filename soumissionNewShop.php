@@ -32,6 +32,11 @@
                                     <input type="text" name="quantity" id="quantity" class="form-control input-sm" placeholder="Quantité" required>
                                 </div>
                             </div>
+                             <div class="col-xs-3 col-sm-3 col-md-3 ">
+                                <div class="form-group">
+                                    <input type="text" name="category" id="category" class="form-control input-sm" placeholder="Catégorie" required>
+                                </div>
+                            </div>
                         </div>
 
 
