@@ -2,11 +2,9 @@
 
 #bde{
 
-    display: flex;
-    justify-content: space-between;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    text-align: center;
+    justify-content:flex-start;
     border: 5px #999999 groove;
 }
 
@@ -21,8 +19,8 @@
 
 .img{
     margin: 1%;
-    width: 20%;
-    height: 20%;
+
+    width: 250px;
 }
 
 .imagef{
