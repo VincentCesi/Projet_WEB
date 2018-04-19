@@ -1,5 +1,5 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 
@@ -12,15 +12,15 @@
     </script>
     <?php
     session_start();
-        if (!isset($_SESSION['id'])) {
-            header("Location: index.php");
-        }
+    if (!isset($_SESSION['id'])) {
+        header("Location: index.php");
+    }
     ?>
     <head>
         <meta charset="utf=8" />
         <title>Boîte à idée</title>
         <?php
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
         ?>
     </head>
 
@@ -41,27 +41,28 @@
 
 
             <section class="col-sm-8">
-<?php
-     include('connexiondb.php');
-     $requeteEvent = $bdd->query('SELECT * FROM ideabox ORDER BY ID_Idea');
-     while ($event = $requeteEvent->fetch())
-     {
-?>
+                <?php
+                include('connexiondb.php');
+                $requeteEvent = $bdd->query('SELECT * FROM ideabox WHERE Validation = 0 ORDER BY ID_Idea');
+                while ($event = $requeteEvent->fetch())
+                {
+                ?>
                 <div class="table_event row">
                     <div class="col-sm-10">
                         <div class="row">
                             <div class="col-sm-12">
                                 <form method="post" action="page_boiteidee_info.php" >
-                                <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
+                                    <div class="Titre"  id="titre"><?= $event['Title']; ?></div>
                                     <br>
-                                <div class="Description"  id="description"><?= $event['Description']; ?></div>
+                                    <div class="Description"  id="description"><?= $event['Description']; ?></div>
                                     <br>
-                                <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
-                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Event']; ?>"/>
+                                    <div class="Auteur"   id="auteur"><?= $event['Author']; ?></div>
+                                    <input type='hidden' name="id_evenement" id="id_evenement" value="<?= $event['ID_Idea']; ?>"/>
 
-                            <div class="col-sm-2" >
-                        <button type="submit">Voir les informations sur cet évènement</button>
-                    </div>
+                                    <div class="col-sm-2" >
+                                        <button type="submit" name="information" value="information">Voir les informations sur cet évènement</button>
+                                        <button type="submit" name="archive" value="archive">Mettre en archive</button>
+                                    </div>
                                 </form>
 
                             </div>
@@ -71,30 +72,30 @@
 
 
                 </div>
-<?php
-            }
-?>
+                <?php
+                }
+                ?>
             </section>
 
             <div class="col-sm-2">
                 <?php
                 if (isset($_SESSION['id'])) {
 
-                if ($_SESSION['id'] != 0) {
-                    echo "Bienvenue " . $_SESSION['email'];
+                    if ($_SESSION['id'] != 0) {
+                        echo "Bienvenue " . $_SESSION['email'];
 
-                    include("Pages/templates/barre_deco.php");
+                        include("Pages/templates/barre_deco.php");
                     }
 
                 }
                 ?>
                 <ul>
-                    <li><a href="soumissionEvenementUser.php">Proposer un évènement</a></li>
+                    <li><a href="soumissionIdeaUser.php">Proposer un évènement</a></li>
                     <?php
-                        if (isset($_SESSION['role'])) {
-                            if ($_SESSION['role'] == 4){?>
-                            <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
-                            <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] == 4){?>
+                    <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
+                    <?php
                         }
                     }
 
@@ -109,11 +110,11 @@
 
     <footer>
         <?php
-            include("Pages/templates/mention_footer.php");
+        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 </html>
 
 <?php
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>

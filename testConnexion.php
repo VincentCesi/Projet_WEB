@@ -24,6 +24,7 @@ if (!empty($email) AND !empty($password)){
                 $_SESSION['id'] = $userinfo['ID_User'];
                 $_SESSION['email'] = $userinfo['Email'];
                 $_SESSION['role'] = $userinfo['ID_Role'];
+                $_SESSION['galerie'] = 0;
 
             header("Location: index.php");
 

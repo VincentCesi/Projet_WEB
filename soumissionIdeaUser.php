@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
 			    	                <div class="checkbox">
-                                    <label><input type="checkbox" name="event" id="event" value="">Est-ce un evenement ?</label>
+                                    <label><input type="checkbox" name="event" id="event" value="1">Est-ce un evenement ?</label>
                                     </div>
                                 </div>
                             </div>

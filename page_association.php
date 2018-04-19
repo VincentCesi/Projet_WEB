@@ -1,5 +1,5 @@
 <?php
-    include("Pages/templates/bootstrap.php");
+include("Pages/templates/bootstrap.php");
 ?>
 
 <!DOCTYPE htlm>
@@ -16,7 +16,7 @@
         <meta charset="utf=8" />
         <title>Associations</title>
         <?php
-            include("Pages/templates/head_bde.php");
+        include("Pages/templates/head_bde.php");
 
         ?>
     </head>
@@ -40,16 +40,16 @@
 
             <div class="col-lg-2">
                 <?php
-                    if (isset($_SESSION['id'])) {
+                if (isset($_SESSION['id'])) {
 
                     if ($_SESSION['id'] != 0) {
                         echo "Bienvenue " . $_SESSION['email'];
 
                         include("Pages/templates/barre_deco.php");
                     }
-                    }else {
-                        include("Pages/templates/barre_coins.php");
-                    }
+                }else {
+                    include("Pages/templates/barre_coins.php");
+                }
                 ?>
             </div>
 
@@ -62,11 +62,11 @@
 
     <footer>
         <?php
-            include("Pages/templates/mention_footer.php");
+        include("Pages/templates/mention_footer.php");
         ?>
     </footer>
 </html>
 
 <?php
-    include("Pages/templates/style.css");
+include("Pages/templates/style.css");
 ?>
