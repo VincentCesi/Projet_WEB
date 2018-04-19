@@ -27,7 +27,7 @@ include("bootstrap.php");
         </section>
 
         <div class="col-sm-3 col-sm-offset-1">
-            <img src="images/logos/LogoBDExiaBlack_2.png" class="img" />
+            <img src="images/logos/LogoBDExiaBlack_4.png" class="img" />
 
         </div>
 
