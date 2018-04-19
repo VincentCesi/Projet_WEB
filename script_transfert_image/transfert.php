@@ -1,5 +1,5 @@
 <?php
-header( "refresh:5;url=envoieimage.php" );
+header( "refresh:5;url=../page_evenement.php" );
 
 $idEvent = $_POST['id_evenement'];
 session_start();

@@ -6,7 +6,6 @@ include("Pages/templates/bootstrap.php");
 <html>
     <?php
     session_start();
-    $_SESSION['galerie']=1;
     if (!isset($_SESSION['id'])) {
         header("Location: index.php");
     }
@@ -24,7 +23,6 @@ include("Pages/templates/bootstrap.php");
     <body>
 
         <?php
-        $_SESSION['EventID']=$_POST['id_evenement'];
         $idEvent = $_POST['id_evenement'];
 
         include('connexiondb.php');
@@ -88,7 +86,10 @@ include("Pages/templates/bootstrap.php");
                     <input type="submit" value="Envoie Images" name="" id="">
                 </form>
 
-                <button onclick="location.href = 'page_galerie.php';">Galerie</button>
+                <form method="post" action="page_galerie.php">
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                    <button type="submit" onclick="location.href = 'page_galerie.php';">Galerie</button>
+                </form>
             </div>
         </div>
     </body>
