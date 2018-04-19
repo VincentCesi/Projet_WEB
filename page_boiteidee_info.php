@@ -34,6 +34,7 @@ if(isset($_POST['information'])){
     $event = $requeteEvent->fetch();
         ?>
         <div id="onglet" class="col-lg-12">
+            <div class="row">
             <div class="col-sm-2">
                 <?php
     include("Pages/templates/barre_nav.php");
@@ -75,6 +76,7 @@ if(isset($_POST['information'])){
 
 
             </div>
+        </div>
         </div>
 
     </body>
