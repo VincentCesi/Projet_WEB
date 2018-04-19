@@ -76,6 +76,7 @@ if(isset($_POST['information'])){
 
             </div>
         </div>
+
     </body>
 
     <footer>

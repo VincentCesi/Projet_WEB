@@ -88,7 +88,30 @@ include("Pages/templates/bootstrap.php");
 
                 <button onclick="location.href = 'page_galerie.php';">Galerie</button>
             </div>
+
+
+            <div class="col-lg-12" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <form role="form" action ="envoiCommentaire.php" method="post">
+                                <textarea rows="2" type="text" name="commentaire" id="commentaire" class="form-control input-sm" placeholder="Ecrivez votre commentaire" required></textarea>
+                                <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <h5 class="modal-title" id="auteur" name="auteur">Modal title</h5>
+                            </form>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
     </body>
 
     <footer>
