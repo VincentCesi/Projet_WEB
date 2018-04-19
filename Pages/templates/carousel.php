@@ -55,7 +55,7 @@ function make_slides($bdd)
    $output .= '<div class="item">';
   }
   $output .= '
-   <img src="images/evenement/'.$row["ID_Images"].'" style="height:450px;margin:auto;" />
+   <img src="images/'.$row["UrlImage"].'" style="height:450px;margin:auto;" />
    <div class="carousel-caption">
    </div>
   </div>

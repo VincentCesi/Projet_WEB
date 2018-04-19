@@ -56,7 +56,6 @@ if(isset($_POST['information'])){
                             <div class="Description"  id="description"><?= $event['Description']; ?></div>
                             <br>
                             <div class="Auteur"   id="auteur">Auteur: <?= $event['Author']; ?></div>
-                            <button type="submit" name="archive" value="archive">Mettre en archive</button>
                         </form>
 
                     </div>
