@@ -1,5 +1,5 @@
 <?php
-//header("Location: index.php");
+header("Location: index.php");
 session_start();
 $title = $_POST['title'];
 $Author = $_POST['Author'];
