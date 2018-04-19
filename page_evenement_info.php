@@ -112,7 +112,7 @@ include("Pages/templates/bootstrap.php");
 
                             include('connexiondb.php');
                             $idEvent = $_POST['id_evenement'];
-                            $requeteComment = $bdd->prepare('SELECT * FROM comments WHERE ID_EventValidated = :idEvent ORDER BY ID_Comment DESC');
+                            $requeteComment = $bdd->prepare('SELECT * FROM comments WHERE ID_EventValidated = :idEvent ORDER BY PostDate DESC ');
                             $requeteComment ->execute(array(':idEvent'=> $event['ID_EventValidated']));
                             while ($comment = $requeteComment->fetch())
                             {
