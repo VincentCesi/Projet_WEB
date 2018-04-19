@@ -6,9 +6,11 @@ include("Pages/templates/bootstrap.php");
 <html>
     <?php
     session_start();
+
     if (!isset($_SESSION['id'])) {
         header("Location: index.php");
     }
+
     ?>
     <head>
         <meta charset="utf=8" />
@@ -29,6 +31,7 @@ include("Pages/templates/bootstrap.php");
         $requeteEvent = $bdd->prepare("SELECT * FROM eventValidated WHERE ID_EventValidated = ?");
         $requeteEvent->execute(array($idEvent));
         $event = $requeteEvent->fetch();
+
 
         ?>
         <div id="onglet" class="col-lg-12">
@@ -85,6 +88,13 @@ include("Pages/templates/bootstrap.php");
                     <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                     <input type="submit" value="Images" name="" id="">
                 </form>
+
+
+                <form method="post" action="page_galerie.php">
+                    <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                    <button type="submit" onclick="location.href = 'page_galerie.php';">Galerie</button>
+                </form>
+
             </div>
 
 

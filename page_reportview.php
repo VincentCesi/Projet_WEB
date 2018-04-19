@@ -88,20 +88,6 @@ include("Pages/templates/bootstrap.php");
 
                 }
                 ?>
-                <ul>
-                    <li><a href="soumissionIdeaUser.php">Proposer un évènement</a></li>
-                    <?php
-                    if (isset($_SESSION['role'])) {
-                        if ($_SESSION['role'] == 4){?>
-                    <li><a href="soumissionEvenementAdmin.php">Proposer un évènement validé</a></li>
-                    <?php
-                        }
-                    }
-
-                    ?>
-
-
-                </ul>
 
             </div>
         </div>
