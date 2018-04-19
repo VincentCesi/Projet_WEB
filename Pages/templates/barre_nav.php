@@ -24,7 +24,7 @@
         <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == 3) { ?>
-        <li><a href="formereport.php">Signaler</a></li>
+        <li class="bar9"><a href="page_report.php">Signaler</a></li>
 
         <?php
             }}?>
