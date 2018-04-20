@@ -1,6 +1,6 @@
 <?php
 
-//header("Location: index.php");
+header("Location: page_boiteidee.php");
     include('connexiondb.php');
     session_start();
     $idEvent = $_POST['id_evenement_like'];

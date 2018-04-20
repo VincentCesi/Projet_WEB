@@ -122,10 +122,7 @@ include("Pages/templates/bootstrap.php");
                         <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
                     </form>
 
-                    <form action="likeIdee.php" method="post">
-                        <input type="submit" value="J'aime" name="Like" id="Like">
-                        <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
-                    </form>
+
 
                     <form action="script_transfert_image/Envoieimage.php" method="post">
 
