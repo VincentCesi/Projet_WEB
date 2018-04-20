@@ -66,6 +66,49 @@ include("Pages/templates/bootstrap.php");
 
                         </div>
 
+                        <div class="col-sm-12" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <form role="form" action ="envoiCommentaire.php" method="post">
+                                        <textarea rows="2" type="text" name="commentaire" id="commentaire" class="form-control input-sm" placeholder="Ecrivez votre commentaire" required></textarea>
+                                        <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
+                                        <button type="submit" class="btn btn-primary">Envoyer</button>
+
+                                    </form>
+                                    <?php
+
+                                    include('connexiondb.php');
+                                    $idEvent = $_POST['id_evenement'];
+                                    $requeteComment = $bdd->prepare('SELECT * FROM comments WHERE ID_EventValidated = :idEvent ORDER BY PostDate DESC ');
+                                    $requeteComment ->execute(array(':idEvent'=> $event['ID_EventValidated']));
+                                    while ($comment = $requeteComment->fetch())
+                                    {
+                                        $requeteCommentAuthor = $bdd->prepare('SELECT Email FROM users WHERE ID_User = :author ');
+                                        $requeteCommentAuthor ->execute(array(':author'=> $comment['ID_User']));
+                                        $requeteAuthor = $requeteCommentAuthor->fetch();
+                                    ?>
+                                    <div class="modal-header">
+                                        <?= $requeteAuthor['Email']; ?> écrit le <?= $comment['PostDate']; ?>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?= $comment['Content']; ?>
+                                    </div>
+                                    <form role="form" action ="deletecom.php" method="post">
+
+                                        <?php
+                                        if ($_SESSION['role'] == 4) { ?>
+                                        <input type='hidden' name="id_comment" Value="<?= $comment['ID_Comment']; ?>"/>
+                                        <button type="submit" class="btn-danger">Supprimer</button>
+                                        <?php
+                                                                    }
+                                        ?>
+                                    </form>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
 
 
 
@@ -99,49 +142,7 @@ include("Pages/templates/bootstrap.php");
                 </div>
 
 
-                <div class="col-lg-12" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <form role="form" action ="envoiCommentaire.php" method="post">
-                                <textarea rows="2" type="text" name="commentaire" id="commentaire" class="form-control input-sm" placeholder="Ecrivez votre commentaire" required></textarea>
-                                <input type='hidden' name="id_evenement" Value="<?= $event['ID_EventValidated']; ?>"/>
-                                <button type="submit" class="btn btn-primary">Envoyer</button>
 
-                            </form>
-                            <?php
-
-                            include('connexiondb.php');
-                            $idEvent = $_POST['id_evenement'];
-                            $requeteComment = $bdd->prepare('SELECT * FROM comments WHERE ID_EventValidated = :idEvent ORDER BY PostDate DESC ');
-                            $requeteComment ->execute(array(':idEvent'=> $event['ID_EventValidated']));
-                            while ($comment = $requeteComment->fetch())
-                            {
-                                $requeteCommentAuthor = $bdd->prepare('SELECT Email FROM users WHERE ID_User = :author ');
-                                $requeteCommentAuthor ->execute(array(':author'=> $comment['ID_User']));
-                                $requeteAuthor = $requeteCommentAuthor->fetch();
-                            ?>
-                            <div class="modal-header">
-                                <?= $requeteAuthor['Email']; ?> écrit le <?= $comment['PostDate']; ?>
-                            </div>
-                            <div class="modal-body">
-                                <?= $comment['Content']; ?>
-                            </div>
-                            <form role="form" action ="deletecom.php" method="post">
-
-                                <?php
-                                    if ($_SESSION['role'] == 4) { ?>
-                                 <input type='hidden' name="id_comment" Value="<?= $comment['ID_Comment']; ?>"/>
-                                <button type="submit" class="btn-danger">Supprimer</button>
-                                <?php
-                                    }
-                                ?>
-                            </form>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>

@@ -74,7 +74,8 @@ include("Pages/templates/bootstrap.php");
                                     do
                                     {
                                 ?>
-                                <div>
+                                <div class="col-sm-6">
+
                                     <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" style="height:200px;margin:1%;"/>
                                     <?php
                                         if (isset($_SESSION['role'])) {
