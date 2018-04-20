@@ -43,11 +43,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-			    					    <div class="form-group">
-                                            <input type="submit" value="Upload d'images" class="btn btn-info btn-block">
-			    					    </div>
-			    	            </div>
+
 
                                 <div class="col-xs-6 col-sm-6 col-md-6">
 		    			                   <input type="submit" value="Proposer" class="btn btn-info btn-block">
