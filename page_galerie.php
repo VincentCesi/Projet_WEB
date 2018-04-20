@@ -79,7 +79,7 @@ include("Pages/templates/bootstrap.php");
                                     <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>" style="height:200px;margin:1%;"/>
                                     <?php
                                         if (isset($_SESSION['role'])) {
-                                            if ($_SESSION['role'] != 3) { ?>
+                                            if ($_SESSION['role'] == 3) { ?>
                                     <form action="Pages/templates/delete_image.php" method="post">
                                         <input type="hidden" name="del" value="<?php  echo $requete['UrlImage'] ?>"/>
                                         <input type="submit" value="delete"/>
@@ -103,7 +103,7 @@ include("Pages/templates/bootstrap.php");
                                     <img src="script_transfert_image/<?php echo $requete['UrlImage'];  ?>"  style="height:200px;margin:1%;"/>
                                     <?php
                                         if (isset($_SESSION['role'])) {
-                                            if ($_SESSION['role'] != 3) { ?>
+                                            if ($_SESSION['role'] == 3) { ?>
                                     <form action="Pages/templates/delete_image.php" method="post">
                                         <input type="hidden" name="del" value="<?php  echo $requete['UrlImage'] ?>"/>
                                         <input type="submit" value="delete"/>
