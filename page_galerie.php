@@ -48,7 +48,7 @@ include("Pages/templates/bootstrap.php");
                     </script>
                 </div>
 
-                <section class="col-sm-8">
+                <div class="col-sm-8">
                     <div class="conteneur">
                         <div class="row">
                             <div class="gallery">
@@ -119,7 +119,7 @@ include("Pages/templates/bootstrap.php");
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <div class="col-sm-2">
                     <?php

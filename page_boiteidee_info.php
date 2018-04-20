@@ -44,7 +44,7 @@ if(isset($_POST['information'])){
                 </script>
             </div>
 
-            <section class="col-sm-8">
+            <div class="col-sm-8">
                 <div class="row">
 
                     <div class="col-sm-12">
@@ -65,7 +65,7 @@ if(isset($_POST['information'])){
 
 
                 </div>
-            </section>
+            </div>
 
             <div class="col-sm-2">
                 <form class="go_event" action="likeIdee.php" method="post">

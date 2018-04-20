@@ -40,7 +40,7 @@ include("Pages/templates/bootstrap.php");
 
 
 
-                <section class="col-sm-8">
+                <div class="col-sm-8">
                     <?php
                     include('connexiondb.php');
                     $requeteReport = $bdd->query('SELECT * FROM reportation ORDER BY ID_Report');
@@ -74,7 +74,7 @@ include("Pages/templates/bootstrap.php");
                     <?php
                     }
                     ?>
-                </section>
+                </div>
 
                 <div class="col-sm-2">
                     <?php

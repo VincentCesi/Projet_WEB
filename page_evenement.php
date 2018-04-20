@@ -40,7 +40,7 @@ include("Pages/templates/bootstrap.php");
                 </div>
 
 
-                <section class="col-sm-8">
+                <div class="col-sm-8">
                     <?php
                     include('connexiondb.php');
                     $requeteEvent = $bdd->query('SELECT * FROM eventvalidated ORDER BY ID_EventValidated');
@@ -73,7 +73,7 @@ include("Pages/templates/bootstrap.php");
                     <?php
                     }
                     ?>
-                </section>
+                </div>
 
                 <div class="col-sm-2">
                     <?php
